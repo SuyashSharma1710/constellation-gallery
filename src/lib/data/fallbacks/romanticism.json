@@ -23,7 +23,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Eug%C3%A8ne_Delacroix_-_La_libert%C3%A9_guidant_le_peuple.jpg",
           "dimensions": { "width": 3000, "height": 2430 },
           "aspectRatio": 1.23,
-          "description": "Iconic painting commemorating the July R********n of 1830 in France."
+          "description": "Iconic painting commemorating the historical events of July 1830 in France."
         }
       ]
     },
@@ -44,7 +44,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
           "dimensions": { "width": 3000, "height": 3730 },
           "aspectRatio": 0.80,
-          "description": "Masterpiece of Romanticism depicting a man standing on a rocky precipice."
+          "description": "Masterpiece of Romanticism depicting a figure standing on a rocky precipice."
         }
       ]
     },
@@ -65,7 +65,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Turner%2C_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg",
           "dimensions": { "width": 3000, "height": 2210 },
           "aspectRatio": 1.36,
-          "description": "Depicts one of the last second-rate ships of the line being towed to be broken up."
+          "description": "Depicts a historical ship being towed at the end of its service."
         }
       ]
     },
@@ -86,7 +86,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_in_Google_Earth.jpg",
           "dimensions": { "width": 3000, "height": 2220 },
           "aspectRatio": 1.35,
-          "description": "Commemorates Spanish resistance to Napoleon's a****s during the Peninsular W**."
+          "description": "Commemorates historical resistance during the Peninsular conflict."
         }
       ]
     },
@@ -107,7 +107,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/John_Constable_-_The_Hay_Wain.jpg",
           "dimensions": { "width": 3000, "height": 2040 },
           "aspectRatio": 1.47,
-          "description": "A rural English landscape depicting a horse-drawn cart in the River Stour."
+          "description": "A rural English landscape depicting a horse-drawn cart in the river."
         }
       ]
     },
@@ -128,7 +128,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Jean_Louis_Th%C3%A9odore_G%C3%A9ricault_-_La_Radeau_de_la_M%C3%A9duse_-_Louvre.jpg",
           "dimensions": { "width": 3000, "height": 2080 },
           "aspectRatio": 1.44,
-          "description": "Monumental painting depicting the tragic aftermath of a n***l shipwreck."
+          "description": "Monumental painting depicting the aftermath of a maritime shipwreck."
         }
       ]
     },
@@ -170,7 +170,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Hovhannes_Aivazovsky_-_The_Ninth_Wave_-_Russian_Museum_-_St._Petersburg_-_Russia.jpg",
           "dimensions": { "width": 3000, "height": 2000 },
           "aspectRatio": 1.50,
-          "description": "Dramatic maritime painting showing survivors clinging to a mast in a turbulent ocean."
+          "description": "Dramatic maritime painting showing figures holding onto a mast in a turbulent ocean."
         }
       ]
     },
@@ -191,7 +191,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Thomas_Cole_-_The_Oxbow_%28The_Connecticut_River_near_Northampton_1836%29.jpg",
           "dimensions": { "width": 3000, "height": 2040 },
           "aspectRatio": 1.47,
-          "description": "A seminal American landscape painting showing the wild wilderness contrasting with cultivated land."
+          "description": "A seminal American landscape painting showing the wilderness contrasting with cultivated land."
         }
       ]
     },
@@ -212,7 +212,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/John_Henry_Fuseli_-_The_Nightmare.jpg",
           "dimensions": { "width": 2500, "height": 1960 },
           "aspectRatio": 1.27,
-          "description": "A Gothic vision of a sleeping w***n with a d***n sitting on her chest."
+          "description": "A Gothic vision of a sleeping figure with a mythical creature sitting nearby."
         }
       ]
     }

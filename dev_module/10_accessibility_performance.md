@@ -61,6 +61,7 @@ Ensure the application meets accessibility standards (WCAG AA), respects user pr
 | Time to Interactive | < 3.5s | Lighthouse |
 | Total Blocking Time | < 200ms | Lighthouse |
 | Cumulative Layout Shift | < 0.1 | Lighthouse |
+| Database Query (getPeriods) | < 50ms cold, < 10ms warm | Neon query timing in server logs |
 
 ### 10.6 Bundle Optimization
 

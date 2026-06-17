@@ -2,6 +2,7 @@ import type { DataResult, PeriodConstellation } from "./types";
 import { queryWikidata } from "./wikidata";
 import { fetchWikimediaImages } from "./wikimedia";
 import { transformRawData } from "./transformer";
+import { constellationLayout } from "@/lib/utils/math";
 
 const PERIOD_CONFIG: Record<string, { name: string; description: string }> = {
   Q4692: {
@@ -125,6 +126,11 @@ export async function getPeriods(): Promise<DataResult<PeriodConstellation[]>> {
     if (result.ok) {
       results.push(result.data);
     }
+  }
+
+  const layout = constellationLayout(results.length, 18);
+  for (let i = 0; i < results.length; i++) {
+    results[i].cosmosPosition = layout[i];
   }
 
   return { ok: true, data: results };

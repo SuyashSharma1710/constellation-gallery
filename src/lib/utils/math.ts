@@ -37,3 +37,60 @@ export function spiralLayout(count: number, radius: number): Array<{ x: number; 
 
   return points;
 }
+
+export function constellationLayout(count: number, spacing: number = 18): Array<{ x: number; y: number; z: number }> {
+  const points: Array<{ x: number; y: number; z: number }> = [];
+  const angleStep = (Math.PI * 2 * 3) / count;
+
+  for (let i = 0; i < count; i++) {
+    const angle = angleStep * i;
+    const r = Math.sqrt(i + 1) * spacing;
+    points.push({
+      x: Math.cos(angle) * r,
+      y: (Math.sin(i * 1.7) * 3),
+      z: Math.sin(angle) * r,
+    });
+  }
+
+  return points;
+}
+
+export function collisionAvoidance(
+  points: Array<{ x: number; y: number; z: number }>,
+  minDistance: number = 0.5
+): Array<{ x: number; y: number; z: number }> {
+  const result = points.map((p) => ({ ...p }));
+  const maxIterations = 10;
+
+  for (let iter = 0; iter < maxIterations; iter++) {
+    let moved = false;
+
+    for (let i = 0; i < result.length; i++) {
+      for (let j = i + 1; j < result.length; j++) {
+        const dx = result[j].x - result[i].x;
+        const dy = result[j].y - result[i].y;
+        const dz = result[j].z - result[i].z;
+        const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+        if (dist < minDistance && dist > 0.001) {
+          const push = (minDistance - dist) / 2;
+          const nx = dx / dist;
+          const ny = dy / dist;
+          const nz = dz / dist;
+
+          result[i].x -= nx * push;
+          result[i].y -= ny * push;
+          result[i].z -= nz * push;
+          result[j].x += nx * push;
+          result[j].y += ny * push;
+          result[j].z += nz * push;
+          moved = true;
+        }
+      }
+    }
+
+    if (!moved) break;
+  }
+
+  return result;
+}

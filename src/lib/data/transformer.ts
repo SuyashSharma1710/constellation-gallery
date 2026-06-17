@@ -1,7 +1,7 @@
 import type { PeriodConstellation, ArtistNode, Artwork } from "./types";
 import type { RawWikiData } from "./wikidata";
 import type { RawCommonsImage } from "./wikimedia";
-import { sphericalFibonacci } from "@/lib/utils/math";
+import { sphericalFibonacci, collisionAvoidance } from "@/lib/utils/math";
 
 function resolveImageUrl(
   wikidataImageUrl: string,
@@ -99,21 +99,20 @@ export function transformRawData(
   }
 
   const artists = Array.from(artistMap.values());
-  const positions = sphericalFibonacci(artists.length, 3);
+  let positions = sphericalFibonacci(artists.length, 3);
+  positions = collisionAvoidance(positions, 0.5);
 
   for (let i = 0; i < artists.length; i++) {
     artists[i].localPosition = positions[i];
   }
 
-  const cosmosPosition = sphericalFibonacci(1, 8)[0];
-
-  return {
+return {
     id: periodId,
     name: periodName,
     description,
     wikidataId: periodId,
     artists,
-    cosmosPosition,
+    cosmosPosition: { x: 0, y: 0, z: 0 },
     galleryModelPath: "",
   };
 }

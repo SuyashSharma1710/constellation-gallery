@@ -6,12 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "sync-database": "tsx scripts/sync-database.ts"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.0",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "@react-three/rapier": "^2.2.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.38.0",
     "framer-motion": "^12.40.0",
     "next": "16.2.9",
     "nuqs": "^2.8.9",
@@ -27,9 +34,11 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/three": "^0.184.1",
+    "drizzle-kit": "^0.30.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
+    "tsx": "^4.19.0",
     "typescript": "^5"
   }
 }

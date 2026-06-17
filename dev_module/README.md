@@ -5,7 +5,8 @@
 | # | Module | Est. Days | Depends On | Priority |
 |---|---|---|---|---|
 | **00** | [Project Scaffold & Toolchain](./00_project_scaffold.md) | 1 | — | P0 |
-| **01** | [Data Pipeline & API Layer](./01_data_pipeline.md) | 3 | 00 | P0 |
+| **01** | [Data Pipeline & API Layer](./01_data_pipeline.md) | 2 | 00, 01b | P0 |
+| **01b** | [Database Setup & Seed Script](./01b_database_setup.md) | 2 | 00 | P0 |
 | **02** | [State Management & URL Sync](./02_state_management.md) | 1.5 | 00 | P0 |
 | **03** | [Cosmic Timeline (3D)](./03_cosmic_timeline.md) | 4 | 01, 02 | P0 |
 | **04** | [Artist Profile (2D Overlay)](./04_artist_profile.md) | 2 | 01, 02, 03 | P0 |
@@ -15,24 +16,25 @@
 | **08** | [Audio System](./08_audio_system.md) | 2 | 02, 06 | P1 |
 | **09** | [Mobile Support](./09_mobile_support.md) | 2.5 | 03, 05, 06 | P1 |
 | **10** | [Accessibility & Performance](./10_accessibility_performance.md) | 2 | 06, 07 | P1 |
-| **11** | [Testing & QA](./11_testing_qa.md) | 2 | 01–10 | P2 |
+| **11** | [Testing & QA](./11_testing_qa.md) | 2.5 | 01–10 | P2 |
 
-**Total Estimate:** ~29 days
+**Total Estimate:** ~30.5 days
 
 ## Execution Order
 
 ```
-Phase 1 (Foundation)          Phase 2 (Core Features)         Phase 3 (Polish)
-─────────────────────        ────────────────────────        ─────────────────
-00 ──► 01 ──► 03 ──► 04               05 ──► 06              07  08  09
-  │                │                   │                      │   │   │
-  └──► 02 ────────┘                   └──────────────────────┘   │   │
-                                                                  │   │
-                                                                  └─► 10
-                                                                       │
-                                                                       └─► 11
+Phase 1 (Foundation)                Phase 2 (Core Features)         Phase 3 (Polish)
+─────────────────────               ────────────────────────        ─────────────────
+00 ──► 01b ──► 01 ──► 03 ──► 04            05 ──► 06              07  08  09
+  │                │                         │                      │   │   │
+  └──► 02 ────────┘                         └──────────────────────┘   │   │
+                                                                       │   │
+                                                                       └─► 10
+                                                                            │
+                                                                            └─► 11
 ```
 
-Modules 01 and 02 can run in parallel after 00.
+Modules 01b and 02 can run in parallel after 00.
+Module 01 depends on 01b (needs the database schema and Drizzle client).
 Modules 03 and 05 can run in parallel after 01 and 02.
 Modules 07, 08, 09 can run in parallel after 06.

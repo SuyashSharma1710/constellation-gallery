@@ -33,7 +33,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Claude_Monet_-_Water_Lilies_%281919%29.jpg",
           "dimensions": { "width": 3000, "height": 2150 },
           "aspectRatio": 1.40,
-          "description": "Series of approximately 250 oil paintings of Monet's flower garden at Giverny."
+          "description": "Series of approximately 250 oil paintings of a flower garden at Giverny."
         }
       ]
     },
@@ -54,7 +54,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg",
           "dimensions": { "width": 3000, "height": 2230 },
           "aspectRatio": 1.35,
-          "description": "Depiction of a typical Sunday afternoon at the Moulin de la Galette in Montmartre."
+          "description": "Depiction of a typical Sunday afternoon gathering in Montmartre."
         }
       ]
     },
@@ -96,7 +96,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Camille_Pissarro_-_Boulevard_Montmartre_-_Eremitage.jpg",
           "dimensions": { "width": 3000, "height": 2400 },
           "aspectRatio": 1.25,
-          "description": "Series of paintings showing the view from his hotel window of the Boulevard Montmartre."
+          "description": "Series of paintings showing the view from a window of the Boulevard Montmartre."
         }
       ]
     },
@@ -117,7 +117,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Edouard_Manet%2C_A_Bar_at_the_Folies-Berg%C3%A8re.jpg",
           "dimensions": { "width": 3000, "height": 2225 },
           "aspectRatio": 1.35,
-          "description": "A masterwork depicting a barmaid at the famous Folies Bergère nightclub."
+          "description": "A masterwork depicting an attendant at a famous Parisian venue."
         }
       ]
     },
@@ -138,7 +138,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg",
           "dimensions": { "width": 2000, "height": 3000 },
           "aspectRatio": 0.67,
-          "description": "An intimate depiction of a mother bathing her child, reflecting Japanese print aesthetics."
+          "description": "A close depiction of a mother caring for her child, reflecting Japanese print aesthetics."
         }
       ]
     },
@@ -159,7 +159,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Berthe_Morisot_-_Le_Berceau_-_Google_Art_Project.jpg",
           "dimensions": { "width": 2500, "height": 3000 },
           "aspectRatio": 0.83,
-          "description": "A tender portrait of the artist's sister watching over her sleeping infant."
+          "description": "A portrait of the artist's sister watching over her resting child."
         }
       ]
     },

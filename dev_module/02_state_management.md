@@ -122,9 +122,9 @@ export function useUrlState() {
 
 **File:** `src/components/shared/AppInitializer.tsx`
 
-- Client component that receives `PeriodConstellation[]` from server.
+- Client component that receives `PeriodConstellation[]` from the server component (fetched from Neon via Module 01).
 - On mount: calls `setPeriods(data)`, reads URL params, restores state if deep link exists, otherwise sets `viewState: 'COSMOS'`.
-- This is the bridge between server data and client store.
+- This is the bridge between server data (Neon-backed) and client Zustand store.
 
 ## Deliverables
 

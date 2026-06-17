@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import { useAppStore } from '@/lib/store';
-import { useUrlState } from '@/hooks/useUrlState';
 import type { PeriodConstellation } from '@/lib/data/types';
 
 interface AppInitializerProps {
@@ -22,8 +21,6 @@ export default function AppInitializer({ periods }: AppInitializerProps) {
       useAppStore.getState().setViewState('COSMOS');
     }
   }, [viewState, periods]);
-
-  useUrlState();
 
   return null;
 }

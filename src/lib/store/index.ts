@@ -100,6 +100,15 @@ export const useAppStore = create<AppState>()((set, get) => ({
   },
 
   closeArtistOverlay: () => {
+    const current = get().viewState;
+    if (current !== 'ARTIST_OVERLAY') {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn(
+          `[AppStore] Cannot close artist overlay from state: ${current}`
+        );
+      }
+      return;
+    }
     set({
       activeArtist: null,
       viewState: 'COSMOS',

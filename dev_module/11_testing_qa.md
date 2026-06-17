@@ -1,6 +1,6 @@
 # Module 11 — Testing & QA
 
-**Priority:** P2 | **Est. Days:** 2 | **Depends On:** 01–10
+**Priority:** P2 | **Est. Days:** 2.5 | **Depends On:** 01–10
 
 ## Objective
 
@@ -15,7 +15,14 @@ Implement unit tests for the data pipeline, component tests for 2D UI, and E2E s
 
 #### Test Cases:
 
-**`transformer.test.ts`**
+**`repository.test.ts`**
+- Reads data from Neon via Drizzle and maps to `PeriodConstellation[]`.
+- Falls back to static JSON when Neon query fails.
+- Falls back to empty period when both Neon and JSON fail.
+- React `cache()` deduplication: calling `getPeriods()` twice in the same request returns the same promise.
+- Handles empty database (no periods) → returns empty array with `ok: true`.
+
+**`transformer.test.ts` (Seed-Time)**
 - Transforms valid raw Wikidata + Wikimedia data into `PeriodConstellation`.
 - Handles empty artist list → returns empty `artists` array.
 - Handles missing portrait → `portraitUrl: null`.
@@ -23,23 +30,24 @@ Implement unit tests for the data pipeline, component tests for 2D UI, and E2E s
 - Computes `aspectRatio` correctly from dimensions.
 - Generates `localPosition` coordinates for all artists (non-overlapping check on 100 runs).
 
-**`wikidata.test.ts`**
+**`wikidata.test.ts` (Seed-Time)**
 - Builds correct SPARQL query URL for a given Wikidata ID.
 - Parses valid JSON response into `RawWikiData`.
 - Handles HTTP 429 (rate limit) → returns `DataResult` error.
 - Handles timeout → returns `DataResult` error.
 - Handles empty results → returns `DataResult` error.
 
-**`wikimedia.test.ts`**
+**`wikimedia.test.ts` (Seed-Time)**
 - Resolves valid filenames to image URLs with dimensions.
 - Handles 404 for missing files → returns `DataResult` error.
 - Handles malformed API response → returns `DataResult` error.
 
-**`repository.test.ts`**
-- Returns data from SPARQL when API succeeds.
-- Falls back to static JSON when SPARQL fails.
-- Caches results within the revalidation window.
-- Retries 3 times on transient failures.
+**`sync-database.test.ts` (New)**
+- Upserts a period with artists and artworks (idempotent).
+- Re-running the sync with the same data does not create duplicates.
+- Updating an existing record changes the fields (verified via `updatedAt`).
+- Skips a period and continues to the next if Wikidata fails.
+- Exits with non-zero code when any period fails.
 
 ### 11.2 Unit Tests — Utilities
 
@@ -135,7 +143,7 @@ test('full user flow: cosmos → artist → gallery → cosmos', async ({ page }
 npm install -D vitest @testing-library/react @testing-library/jest-dom jsdom @playwright/test
 ```
 
-- **`vitest.config.ts`:** Configure `jsdom` environment, path aliases, and setup file.
+- **`vitest.config.ts`:** Configure `jsdom` environment, path aliases, and setup file. Mock `@neondatabase/serverless` for repository tests.
 - **`playwright.config.ts`:** Configure browsers (Chromium, Firefox, WebKit), base URL, and viewport presets.
 - **`src/test-setup.ts`:** Mock `canvas.getContext('webgl')` for component tests that import Three.js.
 
@@ -161,7 +169,8 @@ jobs:
 
 ## Deliverables
 
-- [ ] Unit tests for data pipeline (transformer, wikidata, wikimedia, repository)
+- [ ] Unit tests for data pipeline (repository with Neon, transformer, wikidata, wikimedia)
+- [ ] Unit tests for sync script (upsert idempotency, error recovery)
 - [ ] Unit tests for utilities (math, TexturePool)
 - [ ] Component tests for 2D UI (ArtistOverlay, ArtworkDetail, TransitionOverlay, LoadingScreen)
 - [ ] E2E smoke test for full user flow

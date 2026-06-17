@@ -4,7 +4,7 @@
 **Lead Developer & Architect:** Suyash Sharma
 **Framework:** Next.js (App Router) + React Three Fiber
 **Date:** June 17, 2026
-**Version:** 4.0 (Dual-Canvas + Resilient Data Architecture)
+**Version:** 5.0 (Dual-Canvas + Neon Database + Resilient Data Architecture)
 
 ---
 
@@ -101,8 +101,10 @@
 | **3D Utilities** | `@react-three/drei` | Camera controls, HTML overlays, GLTF loading, `useTexture.preload()` |
 | **Physics** | `@react-three/rapier` | Rigid body physics for gallery boundaries (gallery canvas only) |
 | **Styling & Motion** | Tailwind CSS, Framer Motion | 2D UI overlays, smooth panel transitions, transition masking |
-| **State Management** | Zustand | Global state tracking (view states, active data, texture cache) |
+| **State Management** | Zustand | Global state tracking (view states, active data) |
 | **URL State** | `nuqs` | Search-param-synced state for deep linking |
+| **Database** | Neon (Serverless Postgres) | Primary data store for all period, artist, and artwork data |
+| **ORM** | Drizzle ORM | Type-safe SQL schema, migrations, and query building |
 | **Image Optimization** | `sharp` (API route) | Server-side resize, WebP conversion, thumbnail generation |
 
 ### 5.2 Dual-Canvas Architecture
@@ -133,67 +135,180 @@
 
 ---
 
-## 6. Dynamic Data Pipeline (Wikidata & Wikimedia)
+## 6. Data Pipeline (Neon + Wikidata / Wikimedia)
 
-### 6.1 Two-Step Fetching Architecture
+### 6.1 Architecture Overview
 
-1. **SPARQL Query (Wikidata):** Next.js Server Components query `query.wikidata.org` for a specific art movement (e.g., Q1944 for Baroque) to retrieve all notable artists, their biographical data, and the raw filenames of their notable paintings.
-2. **Wikimedia Commons API:** Next.js passes the raw filenames to `commons.wikimedia.org/w/api.php` to resolve direct `.jpg`/`.webp` image URLs, extract precise pixel dimensions, and fetch descriptions.
+The data pipeline has two distinct phases:
 
-### 6.2 Resilient Data Layer
+1. **Seed / Sync (offline):** A Node.js script (`scripts/sync-database.ts`) fetches data from Wikidata SPARQL and Wikimedia Commons APIs, transforms it into the typed schema, and upserts it into a Neon (serverless Postgres) database. This script runs:
+   - Manually during development and initial seeding.
+   - On a schedule via Vercel Cron Jobs (weekly) to refresh stale data.
 
-- **Repository Pattern:** All data fetching is wrapped in a repository layer with `try/catch` boundaries. Functions return a `DataResult<T>` discriminated union:
+2. **Read (runtime):** At request time, Next.js Server Components query Neon directly via Drizzle ORM. No external API calls happen during page loads — data is served from the database with sub-10ms query latency.
 
-```typescript
-type DataResult<T> =
-  | { ok: true; data: T }
-  | { ok: false; error: string };
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    SEED / SYNC PHASE                          │
+│                                                               │
+│  scripts/sync-database.ts                                     │
+│  ┌──────────────┐   ┌──────────────┐   ┌──────────────────┐  │
+│  │ Wikidata      │   │ Wikimedia    │   │ Transformer      │  │
+│  │ SPARQL Query  │──▶│ Commons API  │──▶│ (types.ts shape) │  │
+│  └──────────────┘   └──────────────┘   └────────┬─────────┘  │
+│                                                   │            │
+│                                          ┌────────▼─────────┐  │
+│                                          │ Neon Postgres     │  │
+│                                          │ (Drizzle ORM)     │  │
+│                                          └──────────────────┘  │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│                    RUNTIME READ PHASE                          │
+│                                                               │
+│  Next.js Server Component                                     │
+│  ┌──────────────────┐                                         │
+│  │ Drizzle Query    │──────▶ Neon Postgres ──────▶ Client     │
+│  │ (getPeriods)     │          (sub-10ms)          Props      │
+│  └──────────────────┘                                         │
+│         │                                                      │
+│         │ (if Neon unavailable)                                │
+│         ▼                                                      │
+│  ┌──────────────────┐                                         │
+│  │ Fallback JSON     │                                         │
+│  │ (static datasets) │                                         │
+│  └──────────────────┘                                         │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-- **Fallback Datasets:** Each art period has a curated static JSON fallback dataset (~10–15 artists with pre-selected artworks). If the SPARQL query fails, times out, or returns empty results, the fallback is served transparently.
-- **Stale-While-Revalidate:** On subsequent visits, the server serves cached data immediately while revalidating in the background.
-- **Caching:** Next.js `fetch` uses `next: { revalidate: 86400 }` (24-hour cache) since historical art data rarely changes, preventing rate-limiting from Wikipedia.
+### 6.2 Database Schema (Drizzle ORM)
 
-### 6.3 Data Transformation Schema
+The schema mirrors the existing TypeScript types and is normalized across three tables:
 
 ```typescript
-interface Artwork {
-  id: string;
-  title: string;
-  year: string;
-  imageHighResUrl: string;
-  imageThumbnailUrl: string;     // Pre-generated thumbnail for tooltips
-  dimensions: { width: number; height: number };
-  aspectRatio: number;            // Computed: width / height
-  description: string;
-}
+// src/lib/db/schema.ts
+import { pgTable, text, integer, real, jsonb, timestamp } from "drizzle-orm/pg-core";
 
-interface ArtistNode {
-  id: string;
-  name: string;
-  birthYear: string;
-  deathYear: string;
-  portraitUrl: string | null;
-  portraitThumbnailUrl: string | null;
-  artworks: Artwork[];
-  localPosition: { x: number; y: number; z: number };
-}
+export const periods = pgTable("periods", {
+  id: text("id").primaryKey(),                    // Wikidata ID, e.g. "Q4692"
+  name: text("name").notNull(),
+  description: text("description").notNull(),
+  cosmosPositionX: real("cosmos_position_x").notNull().default(0),
+  cosmosPositionY: real("cosmos_position_y").notNull().default(0),
+  cosmosPositionZ: real("cosmos_position_z").notNull().default(0),
+  galleryModelPath: text("gallery_model_path").notNull().default(""),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
 
-interface PeriodConstellation {
-  id: string;
-  name: string;
-  description: string;
-  wikidataId: string;             // e.g., "Q1944" for Baroque
-  artists: ArtistNode[];
-  cosmosPosition: { x: number; y: number; z: number };
-  galleryModelPath: string;       // Period-specific .glb model
+export const artists = pgTable("artists", {
+  id: text("id").primaryKey(),                    // Wikidata ID, e.g. "Q762"
+  periodId: text("period_id").references(() => periods.id).notNull(),
+  name: text("name").notNull(),
+  birthYear: text("birth_year").notNull().default(""),
+  deathYear: text("death_year").notNull().default(""),
+  portraitUrl: text("portrait_url"),
+  portraitThumbnailUrl: text("portrait_thumbnail_url"),
+  localPositionX: real("local_position_x").notNull().default(0),
+  localPositionY: real("local_position_y").notNull().default(0),
+  localPositionZ: real("local_position_z").notNull().default(0),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const artworks = pgTable("artworks", {
+  id: text("id").primaryKey(),                    // Wikidata ID
+  artistId: text("artist_id").references(() => artists.id).notNull(),
+  title: text("title").notNull(),
+  year: text("year").notNull().default(""),
+  imageHighResUrl: text("image_high_res_url").notNull(),
+  imageThumbnailUrl: text("image_thumbnail_url").notNull(),
+  dimensionsWidth: integer("dimensions_width").notNull().default(800),
+  dimensionsHeight: integer("dimensions_height").notNull().default(600),
+  aspectRatio: real("aspect_ratio").notNull().default(1),
+  description: text("description").notNull().default(""),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+```
+
+### 6.3 Database Tooling
+
+- **Drizzle Kit:** Manages schema migrations and provides a visual database explorer (Drizzle Studio).
+- **Configuration:** `drizzle.config.ts` points to the schema file and Neon connection string.
+- **Commands:**
+  ```bash
+  npm run db:generate    # Generate migration files from schema changes
+  npm run db:migrate     # Apply pending migrations to Neon
+  npm run db:studio      # Launch Drizzle Studio for visual data browsing
+  npm run sync-database  # Run the seed/sync script to populate Neon from Wikidata
+  ```
+- **Dependencies:** `drizzle-orm`, `@neondatabase/serverless`, `drizzle-kit`, `dotenv`.
+
+### 6.4 Seed / Sync Script
+
+**File:** `scripts/sync-database.ts`
+
+- **For each period** (Renaissance, Baroque, Impressionism, Romanticism, Surrealism, Modern Art):
+  1. Query Wikidata SPARQL for artists and artworks (reuses existing `wikidata.ts` + `wikimedia.ts`).
+  2. Transform raw data into `PeriodConstellation` shape via `transformer.ts`.
+  3. Compute procedural positions (spherical Fibonacci for artist stars, constellation spiral layout).
+  4. Upsert into Neon using Drizzle: `INSERT ... ON CONFLICT (id) DO UPDATE`.
+- **Idempotent:** Safe to run multiple times. Uses `ON CONFLICT` upserts so existing records are updated, new ones inserted.
+- **Vercel Cron Job:** Configured in `vercel.json` to run weekly:
+  ```json
+  {
+    "crons": [{
+      "path": "/api/cron/sync-database",
+      "schedule": "0 0 * * 0"
+    }]
+  }
+  ```
+- **Environment Variables:** `DATABASE_URL` (Neon connection string, pooled for serverless).
+
+### 6.5 Runtime Data Access (Repository)
+
+**File:** `src/lib/data/repository.ts`
+
+```typescript
+import { db } from "@/lib/db";
+import { periods, artists, artworks } from "@/lib/db/schema";
+import { eq } from "drizzle-orm";
+
+export async function getPeriods(): Promise<DataResult<PeriodConstellation[]>> {
+  try {
+    const rows = await db.query.periods.findMany({
+      with: {
+        artists: {
+          with: { artworks: true },
+        },
+      },
+    });
+    // Map flat rows back to nested PeriodConstellation shape
+    // ...
+    return { ok: true, data: constellations };
+  } catch {
+    // Fall back to static JSON if Neon is unavailable
+    return loadAllFallbacks();
+  }
 }
 ```
 
-### 6.4 Procedural Generation
+- **Fallback Chain:** Neon → static JSON fallback files → empty constellation (graceful degradation).
+- **No `fetch` caching needed:** Data is in Postgres. Next.js `unstable_cache` or React `cache()` wraps the Drizzle query for per-request deduplication.
 
-- **Cosmic Layout:** A spherical Fibonacci distribution algorithm procedurally generates `localPosition` coordinates for artist stars around their constellation center. Constellation centers are themselves distributed on a larger spiral to create a navigable depth field.
-- **Gallery Layout:** An algorithm maps the array of fetched `Artwork` objects to predefined empty wall slots in the period-specific `.glb` room model, dynamically scaling the Three.js `PlaneGeometry` based on the fetched aspect ratio.
+### 6.6 Two-Step Fetching (Seed Phase Only)
+
+The original Wikidata → Wikimedia two-step pipeline is **preserved but moved to the seed script**:
+
+1. **SPARQL Query (Wikidata):** `scripts/sync-database.ts` queries `query.wikidata.org` for each art movement to retrieve all notable artists, their biographical data, and the raw filenames of their notable paintings.
+2. **Wikimedia Commons API:** The script passes the raw filenames to `commons.wikimedia.org/w/api.php` to resolve direct `.jpg`/`.webp` image URLs, extract precise pixel dimensions, and fetch descriptions.
+
+The transformed result is stored in Neon. At runtime, the app reads from Neon — no external API calls.
+
+### 6.7 Resilient Data Layer
+
+- **Neon as Primary Source:** All runtime reads go through Neon. Connection pooling handles serverless scale.
+- **Fallback Datasets:** Each art period has a curated static JSON fallback dataset (~10–15 artists with pre-selected artworks). If the Neon query fails (connection error, timeout), the fallback is served transparently.
+- **Seed Failure Recovery:** If the sync script fails (Wikidata down, rate limited), Neon retains the last successfully synced data. The script logs errors and exits non-zero for monitoring.
+- **Caching:** Drizzle query results are cached per-request via React `cache()`. No `next: { revalidate }` needed since data freshness is managed by the cron sync.
 
 ---
 
@@ -233,7 +348,7 @@ interface AppState {
   viewState: ViewState;
   setViewState: (state: ViewState) => void;
 
-  // Data
+  // Data (fetched from Neon via server component, passed as props)
   periods: PeriodConstellation[];
   setPeriods: (periods: PeriodConstellation[]) => void;
   activePeriod: PeriodConstellation | null;
@@ -241,18 +356,14 @@ interface AppState {
   activeArtist: ArtistNode | null;
   setActiveArtist: (artist: ArtistNode | null) => void;
 
-  // Texture cache
-  textureCache: Map<string, THREE.Texture>;
-  addTexture: (key: string, texture: THREE.Texture) => void;
-  removeTexture: (key: string) => void;
-  clearTextures: () => void;
-
   // Prefetch status
   prefetchProgress: number; // 0–100
   isPrefetchComplete: boolean;
   setPrefetchProgress: (progress: number) => void;
 }
 ```
+
+Note: The texture cache is managed by a dedicated `TexturePool` class (`src/lib/textures/TexturePool.ts`) with LRU eviction and VRAM budgeting — not in Zustand. The Zustand store is scoped to view state, active data references, and prefetch progress.
 
 ### 8.2 State Transitions
 
@@ -288,7 +399,8 @@ LOADING ──► COSMOS
 | Failure Mode | User Experience |
 |---|---|
 | **WebGL Context Loss** | Detect via `canvas.addEventListener('webglcontextlost')`. Show a "WebGL context lost — refreshing" overlay. Auto-reload the page after 3 seconds. |
-| **SPARQL Query Timeout / Failure** | Fall back to the curated static JSON dataset for the selected period. Show a subtle "Showing cached data" toast. |
+| **Neon Database Unavailable** | Fall back to the curated static JSON dataset for all periods. Show a subtle "Showing cached data" toast. The sync script is unaffected — data persists from the last successful sync. |
+| **SPARQL Query Timeout / Failure (Sync)** | The sync script logs the error, skips the failed period, and continues with remaining periods. Neon retains the last successfully synced data for the failed period. |
 | **Wikimedia Image 404** | Replace with a procedurally generated placeholder (solid color + artist initials). Log the missing filename for later curation. |
 | **GLB Model Load Failure** | Fall back to a default white-box gallery (procedurally generated box room with textured walls). |
 | **AudioContext Blocked** | `AudioManager` queues `resume()` on the first `click`/`keydown` event. Audio silently fails without blocking the experience. |
@@ -306,6 +418,7 @@ LOADING ──► COSMOS
 | **VRAM Usage** | < 200MB at peak (gallery loaded) |
 | **First Contentful Paint** | < 2s on 4G |
 | **Time to Interactive (Cosmos)** | < 3s on 4G |
+| **Database Query (getPeriods)** | < 50ms cold start, < 10ms warm (Neon serverless) |
 | **Gallery Transition** | < 2s from button click to first-person view (masked by animation) |
 
 ---
@@ -332,7 +445,8 @@ LOADING ──► COSMOS
 
 | Layer | Tool | Scope |
 |---|---|---|
-| **Data Fetching** | Vitest | Unit tests for SPARQL → `PeriodConstellation` transformation, error handling, fallback resolution |
+| **Data Fetching** | Vitest | Unit tests for Drizzle queries, data transformation, error handling, fallback resolution |
+| **Database Sync** | Vitest | Unit tests for the sync script: SPARQL → Drizzle upsert, idempotency, error recovery |
 | **2D UI Components** | Storybook + Vitest | Visual regression and interaction tests for artist overlay, artwork detail, loading states |
 | **3D Rendering** | Manual QA | WebGL behavior is verified manually across Chrome, Firefox, Safari, and Edge on desktop + mobile |
 | **Performance** | Lighthouse + Chrome DevTools | Bundle size, FCP, TTI, and VRAM profiling |
@@ -345,4 +459,5 @@ LOADING ──► COSMOS
 - **CORS Policies:** All remote images are proxied through the `/api/image` route, eliminating WebGL cross-origin texture tainting issues entirely.
 - **VRAM Management (Memory Leaks):** Textures are loaded only when `viewState === 'GALLERY'`. The `TexturePool` enforces a 512MB VRAM cap with LRU eviction. On gallery exit, all gallery-specific textures and materials are disposed via Three.js `dispose()`.
 - **Browser Compatibility:** Target the last 2 versions of Chrome, Firefox, Safari, and Edge. WebGL 1.0 minimum (WebGL 2.0 preferred for KTX2 textures).
-- **Network Resilience:** All data fetching has retry logic (3 attempts with exponential backoff). Fallback static datasets ensure the experience never breaks due to upstream API issues.
+- **Neon Connection Pooling:** Use Neon's pooled connection string (`DATABASE_URL_POOLED`) for serverless environments. The Drizzle client is instantiated once per request via React `cache()` to avoid connection exhaustion in serverless functions.
+- **Data Freshness:** Art history data is synced weekly via Vercel Cron. The sync script is idempotent (upserts). Manual re-sync can be triggered via `npm run sync-database`.

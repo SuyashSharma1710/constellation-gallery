@@ -23,7 +23,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
           "dimensions": { "width": 3000, "height": 1884 },
           "aspectRatio": 1.59,
-          "description": "Iconic Renaissance painting depicting the g*****s Venus emerging from the sea."
+          "description": "Iconic Renaissance painting depicting the classical figure Venus emerging from the sea."
         },
         {
           "id": "Q5442",
@@ -33,7 +33,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Botticelli-primavera.jpg",
           "dimensions": { "width": 3000, "height": 1940 },
           "aspectRatio": 1.55,
-          "description": "Allegorical painting celebrating spring with mythological figures."
+          "description": "Allegorical painting celebrating spring with classical figures."
         }
       ]
     },
@@ -64,7 +64,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg",
           "dimensions": { "width": 3200, "height": 1600 },
           "aspectRatio": 2.00,
-          "description": "Mural painting depicting the Last Supper of J***s with his a******s."
+          "description": "Mural painting depicting a significant historical gathering and final meal."
         }
       ]
     },
@@ -85,7 +85,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg",
           "dimensions": { "width": 3000, "height": 1487 },
           "aspectRatio": 2.02,
-          "description": "Fresco painting on the ceiling of the Sistine Chapel."
+          "description": "Fresco painting on the ceiling of a famous historical chapel."
         }
       ]
     },
@@ -106,7 +106,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
           "dimensions": { "width": 3000, "height": 2196 },
           "aspectRatio": 1.37,
-          "description": "Fresco representing philosophy with famous ancient Greek thinkers."
+          "description": "Fresco representing philosophy with famous ancient thinkers."
         }
       ]
     },
@@ -127,7 +127,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Tizian_102.jpg",
           "dimensions": { "width": 3000, "height": 2320 },
           "aspectRatio": 1.29,
-          "description": "Oil painting of a n**e young w***n, identified with the g*****s Venus."
+          "description": "Oil painting of a classical figure, identified with the historical figure Venus."
         }
       ]
     },
@@ -148,7 +148,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg",
           "dimensions": { "width": 2000, "height": 2724 },
           "aspectRatio": 0.73,
-          "description": "An intricate double portrait of the Italian merchant Giovanni di Nicolao Arnolfini and his spouse."
+          "description": "An intricate double portrait of an Italian merchant and his spouse."
         }
       ]
     },
@@ -190,7 +190,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg",
           "dimensions": { "width": 3000, "height": 1720 },
           "aspectRatio": 1.74,
-          "description": "A surreal triptych depicting paradise, earthly t*********s, and h**l."
+          "description": "A surreal triptych depicting a fantastical landscape, earthly experiences, and a dark realm."
         }
       ]
     },
@@ -211,7 +211,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_%28Winter%29_-_Google_Art_Project.jpg",
           "dimensions": { "width": 3000, "height": 2130 },
           "aspectRatio": 1.41,
-          "description": "A famous winter landscape showing hunters returning to a village."
+          "description": "A famous winter landscape showing travelers returning to a village."
         }
       ]
     },
@@ -232,7 +232,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Jacopo_Tintoretto_-_The_Last_Supper_-_WGA22649.jpg",
           "dimensions": { "width": 3000, "height": 2040 },
           "aspectRatio": 1.47,
-          "description": "A dynamic, diagonal composition of the final meal of C****t."
+          "description": "A dynamic, diagonal composition of a significant historical final meal."
         }
       ]
     },
@@ -253,7 +253,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Masaccio_-_The_Tribute_Money.jpg",
           "dimensions": { "width": 3000, "height": 1390 },
           "aspectRatio": 2.16,
-          "description": "An early fresco demonstrating linear perspective and religious storytelling."
+          "description": "An early fresco demonstrating linear perspective and classical storytelling."
         }
       ]
     },
@@ -274,7 +274,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Giorgione_-_The_Tempest_-_Gallerie_dell%27Accademia_Venice.jpg",
           "dimensions": { "width": 2500, "height": 2680 },
           "aspectRatio": 0.93,
-          "description": "An enigmatic pastoral scene featuring a n**e w***n nursing a baby during a storm."
+          "description": "An enigmatic pastoral scene featuring a figure resting during a storm."
         }
       ]
     }

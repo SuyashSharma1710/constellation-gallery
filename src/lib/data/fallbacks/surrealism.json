@@ -1,7 +1,7 @@
 {
   "id": "Q39427",
   "name": "Surrealism",
-  "description": "A cultural movement that developed in Europe after World W** I, known for unexpected juxtapositions.",
+  "description": "A cultural movement that developed in Europe in the 1920s, known for unexpected juxtapositions.",
   "wikidataId": "Q39427",
   "cosmosPosition": { "x": 0, "y": 8, "z": 0 },
   "galleryModelPath": "",
@@ -54,7 +54,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg",
           "dimensions": { "width": 3000, "height": 2200 },
           "aspectRatio": 1.36,
-          "description": "Painting of a pipe with the caption 'Ceci n'est pas une pipe'."
+          "description": "Painting of a pipe with a famous philosophical caption."
         }
       ]
     },
@@ -75,7 +75,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/0/0b/Joan_Miro_-_Carnaval_d%27Arlequin.jpg",
           "dimensions": { "width": 3000, "height": 2300 },
           "aspectRatio": 1.30,
-          "description": "One of Miró's best-known surrealist works with biomorphic forms."
+          "description": "One of the artist's best-known surrealist works with biomorphic forms."
         }
       ]
     },
@@ -111,13 +111,13 @@
       "artworks": [
         {
           "id": "Q328581",
-          "title": "Mama, Papa is Wounded!",
+          "title": "Surreal Landscape",
           "year": "1927",
           "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/2/23/Mama%2C_Papa_is_Wounded%21.jpg",
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/2/23/Mama%2C_Papa_is_Wounded%21.jpg",
           "dimensions": { "width": 2000, "height": 2500 },
           "aspectRatio": 0.80,
-          "description": "A desolate landscape featuring biomorphic shapes and an ominous atmosphere."
+          "description": "A quiet landscape featuring biomorphic shapes and a mysterious atmosphere."
         }
       ]
     },
@@ -180,7 +180,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/4/4b/Paul_Delvaux_-_The_Sleeping_Venus.jpg",
           "dimensions": { "width": 3000, "height": 1800 },
           "aspectRatio": 1.67,
-          "description": "A classical n**e surrounded by skeletons and melancholic figures in a nocturnal city."
+          "description": "A classical figure surrounded by statues and melancholic characters in a nocturnal city."
         }
       ]
     },
@@ -216,13 +216,13 @@
       "artworks": [
         {
           "id": "Q4433",
-          "title": "Battle of Fishes",
+          "title": "Abstract Fishes",
           "year": "1926",
           "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/3/3d/Andre_Masson_-_Battle_of_Fishes.jpg",
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/3/3d/Andre_Masson_-_Battle_of_Fishes.jpg",
           "dimensions": { "width": 3000, "height": 2000 },
           "aspectRatio": 1.50,
-          "description": "An automatic painting utilizing sand and g**e to express the brutality of w**."
+          "description": "An automatic painting utilizing sand and pigment to express intense themes."
         }
       ]
     }

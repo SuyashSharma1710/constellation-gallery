@@ -23,7 +23,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg",
           "dimensions": { "width": 3000, "height": 1370 },
           "aspectRatio": 2.19,
-          "description": "Large 1937 anti-w** oil painting depicting the bombing of Guernica during the Spanish Civil W**."
+          "description": "Large 1937 oil painting depicting historical events in Guernica."
         },
         {
           "id": "Q902",
@@ -33,7 +33,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/4/4c/Les_Demoiselles_d%27Avignon.jpg",
           "dimensions": { "width": 3000, "height": 2930 },
           "aspectRatio": 1.02,
-          "description": "Pro*****ist painting depicting five n**e f****e p*********s."
+          "description": "Avant-garde painting depicting five geometric figures."
         }
       ]
     },
@@ -54,7 +54,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
           "dimensions": { "width": 3000, "height": 2380 },
           "aspectRatio": 1.26,
-          "description": "Oil on canvas depicting the view from the east-facing window of his a****m room."
+          "description": "Oil on canvas depicting a nighttime landscape view from a window."
         },
         {
           "id": "Q156428",
@@ -106,7 +106,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg",
           "dimensions": { "width": 3000, "height": 2100 },
           "aspectRatio": 1.43,
-          "description": "Considered the pinnacle of Kandinsky's pre-W*******r I artistic achievement."
+          "description": "Considered the pinnacle of the artist's early abstract achievements."
         }
       ]
     },
@@ -169,7 +169,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/e/e0/The_Two_Fridas.jpg",
           "dimensions": { "width": 2500, "height": 2490 },
           "aspectRatio": 1.00,
-          "description": "A striking double self-portrait exploring her dual cultural heritage and deep personal pain."
+          "description": "A striking double self-portrait exploring her dual cultural heritage."
         }
       ]
     },
@@ -190,7 +190,7 @@
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg",
           "dimensions": { "width": 2100, "height": 2600 },
           "aspectRatio": 0.81,
-          "description": "Expressionist masterpiece featuring an a*******d figure against a blood-red sky."
+          "description": "Expressionist masterpiece featuring a central figure against a highly expressive sky."
         }
       ]
     },

@@ -19,7 +19,8 @@ Initialize the Next.js project with all required dependencies, folder structure,
 npm install three @react-three/fiber @react-three/drei @react-three/rapier
 npm install zustand nuqs framer-motion
 npm install sharp
-npm install -D @types/three
+npm install @neondatabase/serverless drizzle-orm dotenv
+npm install -D @types/three drizzle-kit tsx
 ```
 
 ### 00.3 Folder Structure
@@ -31,8 +32,11 @@ src/
 │   ├── page.tsx                 # Main page entry
 │   ├── globals.css              # Tailwind + custom tokens
 │   └── api/
-│       └── image/
-│           └── route.ts         # Sharp image proxy (stub)
+│       ├── image/
+│       │   └── route.ts         # Sharp image proxy (stub)
+│       └── cron/
+│           └── sync-database/
+│               └── route.ts     # Vercel Cron endpoint for DB sync
 ├── components/
 │   ├── canvas/
 │   │   ├── CosmosCanvas.tsx     # Cosmos R3F Canvas wrapper
@@ -60,14 +64,17 @@ src/
 ├── lib/
 │   ├── data/
 │   │   ├── types.ts             # ArtistNode, Artwork, PeriodConstellation, DataResult
-│   │   ├── repository.ts        # Repository pattern interface
-│   │   ├── wikidata.ts          # SPARQL query builder + executor
-│   │   ├── wikimedia.ts         # Wikimedia Commons API client
-│   │   ├── transformer.ts       # Raw API → typed schema
-│   │   └── fallbacks/           # Static JSON datasets per period
+│   │   ├── repository.ts        # Repository: reads from Neon via Drizzle, falls back to JSON
+│   │   ├── wikidata.ts          # SPARQL query builder + executor (used by seed script only)
+│   │   ├── wikimedia.ts         # Wikimedia Commons API client (used by seed script only)
+│   │   ├── transformer.ts       # Raw API → typed schema (used by seed script only)
+│   │   └── fallbacks/           # Static JSON datasets per period (runtime fallback)
 │   │       ├── renaissance.json
 │   │       ├── baroque.json
 │   │       └── ...
+│   ├── db/
+│   │   ├── schema.ts            # Drizzle ORM schema (periods, artists, artworks)
+│   │   └── index.ts             # Drizzle client instance (Neon HTTP)
 │   ├── store/
 │   │   └── index.ts             # Zustand store
 │   ├── textures/
@@ -86,6 +93,12 @@ src/
 │   └── useAudioContext.ts
 └── types/
     └── global.d.ts              # Three.js module augmentation
+
+scripts/
+└── sync-database.ts             # Seed script: Wikidata → Neon (runs via `npm run sync-database`)
+
+drizzle/                         # Auto-generated migration files (Drizzle Kit)
+drizzle.config.ts                # Drizzle Kit configuration
 ```
 
 ### 00.4 Configuration Files
@@ -93,6 +106,8 @@ src/
 - **`next.config.ts`:** Configure `images.remotePatterns` for Wikimedia domains, set `experimental.serverActions` if needed.
 - **`tailwind.config.ts`:** Add CSS custom properties for the color palette (obsidian, deep space blue, star white, gold accent, glass panel).
 - **`globals.css`:** Import `Cinzel` and `Inter` from Google Fonts via `next/font/google`. Define `@layer base` with CSS variables.
+- **`drizzle.config.ts`:** Configure Drizzle Kit with schema path, output directory, and Neon connection string.
+- **`.env.local`:** Set `DATABASE_URL` and `DATABASE_URL_POOLED` (Neon connection strings).
 - **`.eslintrc.json`:** Extend `next/core-web-vitals` + `@typescript-eslint` rules.
 - **`tsconfig.json`:** Set `strict: true`, enable path aliases.
 
@@ -142,8 +157,11 @@ interface PeriodConstellation {
 ## Deliverables
 
 - [ ] Running Next.js dev server with Turbopack
-- [ ] All dependencies installed and importable
-- [ ] Folder structure created with placeholder files
+- [ ] All dependencies installed and importable (including `@neondatabase/serverless`, `drizzle-orm`, `drizzle-kit`, `tsx`)
+- [ ] `drizzle.config.ts` configured with schema path and Neon connection
+- [ ] `.env.local` populated with `DATABASE_URL` and `DATABASE_URL_POOLED`
+- [ ] Folder structure created with placeholder files (including `src/lib/db/` and `scripts/`)
+- [ ] `package.json` scripts include `db:generate`, `db:migrate`, `db:studio`, `sync-database`
 - [ ] Tailwind with custom color tokens working
 - [ ] TypeScript types defined and compile without errors
 - [ ] `npm run lint` passes clean

@@ -1,70 +1,99 @@
 # Module 01 — Data Pipeline & API Layer
 
-**Priority:** P0 | **Est. Days:** 3 | **Depends On:** 00
+**Priority:** P0 | **Est. Days:** 2 | **Depends On:** 00, 01b
 
 ## Objective
 
-Build the server-side data pipeline that fetches art period data from Wikidata/Wikimedia, transforms it into the typed schema, and serves it to the client. Includes the Sharp image proxy and static fallback datasets.
+Build the server-side data layer that reads art period data from Neon (via Drizzle ORM), transforms flat rows into the nested `PeriodConstellation` shape, and serves it to the client. The data is pre-populated by the seed script in Module 01b — no external API calls happen at runtime. Also includes the Sharp image proxy route.
+
+## Architecture
+
+```
+Request → Server Component → Drizzle Query → Neon Postgres → Client Props
+                                        │
+                                        │ (if Neon unavailable)
+                                        ▼
+                                   Fallback JSON
+```
 
 ## Tasks
 
-### 01.1 SPARQL Query Builder + Executor
-
-**File:** `src/lib/data/wikidata.ts`
-
-- Define SPARQL query templates for retrieving artists and artworks by art movement Wikidata ID.
-- Query structure:
-  1. Get all artists (`wd:Q5` instances) with `occupation` → `painter` and `movement` → `{periodId}`.
-  2. For each artist, retrieve `birthDate`, `deathDate`, `image` (portrait), and `notableWork` items.
-  3. For each notable work, retrieve `title`, `inception` (year), `image` (Wikimedia filename), and `description`.
-- Execute via `fetch` to `https://query.wikidata.org/sparql?format=json&query={encodedQuery}`.
-- Handle errors: timeout (15s), rate limiting (429), empty results.
-- Return `DataResult<RawWikiData>`.
-
-### 01.2 Wikimedia Commons API Client
-
-**File:** `src/lib/data/wikimedia.ts`
-
-- Accept raw filenames from SPARQL results.
-- Call `https://commons.wikimedia.org/w/api.php?action=query&titles=File:{filename}&prop=imageinfo&iiprop=url|size|extmetadata&format=json`.
-- Extract: direct image URL, pixel width, pixel height, description.
-- Return `DataResult<RawCommonsData[]>`.
-
-### 01.3 Data Transformer
-
-**File:** `src/lib/data/transformer.ts`
-
-- Accept raw Wikidata + Wikimedia data.
-- Transform into `PeriodConstellation` with all nested `ArtistNode` → `Artwork` chains.
-- Compute `aspectRatio` from pixel dimensions.
-- Generate `cosmosPosition` using spherical Fibonacci distribution (utility in `src/lib/utils/math.ts`).
-- Generate `localPosition` for each artist around the constellation center.
-- Filter out artworks missing images or titles.
-- Deduplicate artists by Wikidata ID.
-
-### 01.4 Repository Pattern
+### 01.1 Repository — Neon-Backed Queries
 
 **File:** `src/lib/data/repository.ts`
 
+Rewrite the repository to read from Neon via Drizzle instead of calling SPARQL/Wikimedia at runtime:
+
 ```typescript
-export async function getPeriodData(wikidataId: string): Promise<DataResult<PeriodConstellation>> {
-  // 1. Try SPARQL query
-  // 2. If SPARQL fails, load fallback JSON
-  // 3. For each artwork, resolve Wikimedia image URLs
-  // 4. If Wikimedia API fails for individual images, use placeholder
-  // 5. Transform and return
+import { db } from "@/lib/db";
+import type { DataResult, PeriodConstellation, ArtistNode, Artwork } from "./types";
+import { constellationLayout } from "@/lib/utils/math";
+
+export async function getPeriods(): Promise<DataResult<PeriodConstellation[]>> {
+  try {
+    const periodRows = await db.query.periods.findMany({
+      with: {
+        artists: {
+          with: { artworks: true },
+        },
+      },
+    });
+
+    const constellations: PeriodConstellation[] = periodRows.map((p) => ({
+      id: p.id,
+      name: p.name,
+      description: p.description,
+      wikidataId: p.id,
+      cosmosPosition: {
+        x: p.cosmosPositionX,
+        y: p.cosmosPositionY,
+        z: p.cosmosPositionZ,
+      },
+      galleryModelPath: p.galleryModelPath,
+      artists: p.artists.map((a): ArtistNode => ({
+        id: a.id,
+        name: a.name,
+        birthYear: a.birthYear,
+        deathYear: a.deathYear,
+        portraitUrl: a.portraitUrl,
+        portraitThumbnailUrl: a.portraitThumbnailUrl,
+        localPosition: {
+          x: a.localPositionX,
+          y: a.localPositionY,
+          z: a.localPositionZ,
+        },
+        artworks: a.artworks.map((aw): Artwork => ({
+          id: aw.id,
+          title: aw.title,
+          year: aw.year,
+          imageHighResUrl: aw.imageHighResUrl,
+          imageThumbnailUrl: aw.imageThumbnailUrl,
+          dimensions: {
+            width: aw.dimensionsWidth,
+            height: aw.dimensionsHeight,
+          },
+          aspectRatio: aw.aspectRatio,
+          description: aw.description,
+        })),
+      })),
+    }));
+
+    return { ok: true, data: constellations };
+  } catch {
+    return loadAllFallbacks();
+  }
 }
 ```
 
-- Each step is wrapped in `try/catch` with individual timeout handling.
-- Retry logic: 3 attempts with exponential backoff (1s, 2s, 4s).
-- Fetch caching: `next: { revalidate: 86400 }`.
+- **Fallback chain:** Neon → static JSON fallback files → empty period (graceful degradation).
+- **Caching:** Wrap with React `cache()` for per-request deduplication in server components.
+- **No `fetch` caching needed:** Data is in Postgres. Freshness is managed by the cron sync.
 
-### 01.5 Fallback Datasets
+### 01.2 Fallback Datasets (Unchanged)
 
 **Files:** `src/lib/data/fallbacks/*.json`
 
-Create curated static JSON for each major period:
+The existing static JSON fallback files remain as the secondary data source. The repository falls back to them if Neon is unavailable.
 
 | Period | Wikidata ID | Artists |
 |---|---|---|
@@ -75,7 +104,23 @@ Create curated static JSON for each major period:
 | Surrealism | Q39427 | 10 |
 | Modern Art | Q38166 | 10 |
 
-Each fallback file contains the full `PeriodConstellation` shape with pre-resolved image URLs (from Wikimedia, validated to exist).
+### 01.3 SPARQL Query Builder + Executor (Seed-Time Only)
+
+**File:** `src/lib/data/wikidata.ts`
+
+*This file is unchanged from the original implementation.* It is imported only by `scripts/sync-database.ts` (not by the runtime app). The SPARQL query builder, executor, and error handling remain as-is for the seed script.
+
+### 01.4 Wikimedia Commons API Client (Seed-Time Only)
+
+**File:** `src/lib/data/wikimedia.ts`
+
+*This file is unchanged from the original implementation.* It is imported only by `scripts/sync-database.ts`. The Commons API batch resolver, filename extraction, and response parsing remain as-is.
+
+### 01.5 Data Transformer (Seed-Time Only)
+
+**File:** `src/lib/data/transformer.ts`
+
+*This file is unchanged from the original implementation.* It is imported only by `scripts/sync-database.ts`. The transformation from `RawWikiData` → `PeriodConstellation` happens during the seed phase, not at runtime.
 
 ### 01.6 Image Proxy API Route
 
@@ -92,28 +137,29 @@ Each fallback file contains the full `PeriodConstellation` shape with pre-resolv
 
 **File:** `src/app/page.tsx` (or a dedicated server component)
 
-- `async` server component that calls `getPeriodData()` for all periods.
+- `async` server component that calls `getPeriods()` (reads from Neon).
 - Passes the resolved `PeriodConstellation[]` as props to the client component tree.
 - Shows a loading skeleton while data fetches.
+- On the first request (cold start), Neon may take ~50ms. Subsequent requests hit the React cache.
 
 ## Deliverables
 
-- [ ] SPARQL query returns valid artist + artwork data for each period
-- [ ] Wikimedia API resolves filenames to direct image URLs with dimensions
-- [ ] Transformer produces valid `PeriodConstellation` objects
-- [ ] Repository handles SPARQL failures by falling back to static JSON
+- [ ] Repository reads all 6 periods from Neon via Drizzle relations
+- [ ] Flat rows correctly mapped to nested `PeriodConstellation` shape
+- [ ] Repository falls back to static JSON if Neon is unavailable
+- [ ] React `cache()` wraps `getPeriods()` for per-request deduplication
 - [ ] Fallback datasets exist for all 6 periods with real, validated data
 - [ ] Image proxy route resizes and converts images to WebP
-- [ ] Server component renders with fetched data within 2s
+- [ ] Server component renders with data from Neon within 2s
 
 ## Validation
 
 ```bash
-# Test SPARQL query directly
-curl "https://query.wikidata.org/sparql?format=json&query=..."
-
 # Test image proxy
 curl "http://localhost:3000/api/image?url=...&w=512"
+
+# Verify Neon connection
+node -e "const { neon } = require('@neondatabase/serverless'); const sql = neon(process.env.DATABASE_URL_POOLED); sql\`SELECT count(*) FROM periods\`.then(console.log)"
 
 # Type check
 npx tsc --noEmit
