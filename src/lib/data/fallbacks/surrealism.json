@@ -1,14 +1,14 @@
 {
   "id": "Q39427",
   "name": "Surrealism",
-  "description": "A cultural movement that developed in Europe after World War I, known for unexpected juxtapositions.",
+  "description": "A cultural movement that developed in Europe after World W** I, known for unexpected juxtapositions.",
   "wikidataId": "Q39427",
   "cosmosPosition": { "x": 0, "y": 8, "z": 0 },
   "galleryModelPath": "",
   "artists": [
     {
       "id": "Q5577",
-      "name": "Salvador Dali",
+      "name": "Salvador Dalí",
       "birthYear": "1904",
       "deathYear": "1989",
       "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Salvador_Dal%C3%AD_1939.jpg",
@@ -29,7 +29,7 @@
     },
     {
       "id": "Q42048",
-      "name": "Rene Magritte",
+      "name": "René Magritte",
       "birthYear": "1898",
       "deathYear": "1967",
       "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Ren%C3%A9_Magritte.jpg",
@@ -60,7 +60,7 @@
     },
     {
       "id": "Q151558",
-      "name": "Joan Miro",
+      "name": "Joan Miró",
       "birthYear": "1893",
       "deathYear": "1983",
       "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Portrait_of_Joan_Mir%C3%B3%2C_Barcelona_1935_June_13.jpg",
@@ -74,8 +74,8 @@
           "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/0/0b/Joan_Miro_-_Carnaval_d%27Arlequin.jpg",
           "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/0/0b/Joan_Miro_-_Carnaval_d%27Arlequin.jpg",
           "dimensions": { "width": 3000, "height": 2300 },
-          "aspectRatio": 1.3,
-          "description": "One of Miro's best-known surrealist works with biomorphic forms."
+          "aspectRatio": 1.30,
+          "description": "One of Miró's best-known surrealist works with biomorphic forms."
         }
       ]
     },
@@ -97,6 +97,132 @@
           "dimensions": { "width": 3000, "height": 2400 },
           "aspectRatio": 1.25,
           "description": "Early surrealist masterpiece combining mechanical and organic forms."
+        }
+      ]
+    },
+    {
+      "id": "Q160271",
+      "name": "Yves Tanguy",
+      "birthYear": "1900",
+      "deathYear": "1955",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Yves_Tanguy.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Yves_Tanguy.jpg",
+      "localPosition": { "x": 0.8, "y": -0.2, "z": -0.6 },
+      "artworks": [
+        {
+          "id": "Q328581",
+          "title": "Mama, Papa is Wounded!",
+          "year": "1927",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/2/23/Mama%2C_Papa_is_Wounded%21.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/2/23/Mama%2C_Papa_is_Wounded%21.jpg",
+          "dimensions": { "width": 2000, "height": 2500 },
+          "aspectRatio": 0.80,
+          "description": "A desolate landscape featuring biomorphic shapes and an ominous atmosphere."
+        }
+      ]
+    },
+    {
+      "id": "Q234293",
+      "name": "Leonora Carrington",
+      "birthYear": "1917",
+      "deathYear": "2011",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Leonora_Carrington.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Leonora_Carrington.jpg",
+      "localPosition": { "x": -0.8, "y": 0.6, "z": -0.2 },
+      "artworks": [
+        {
+          "id": "Q4534",
+          "title": "Portrait of Max Ernst",
+          "year": "1939",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/b/b3/Leonora_Carrington_-_Portrait_of_Max_Ernst.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/b/b3/Leonora_Carrington_-_Portrait_of_Max_Ernst.jpg",
+          "dimensions": { "width": 2000, "height": 2400 },
+          "aspectRatio": 0.83,
+          "description": "A mystical portrait incorporating esoteric symbols and animal familiars."
+        }
+      ]
+    },
+    {
+      "id": "Q238289",
+      "name": "Remedios Varo",
+      "birthYear": "1908",
+      "deathYear": "1963",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Remedios_Varo.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Remedios_Varo.jpg",
+      "localPosition": { "x": 0.3, "y": 0.7, "z": 0.8 },
+      "artworks": [
+        {
+          "id": "Q33445",
+          "title": "The Creation of the Birds",
+          "year": "1957",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/Remedios_Varo_-_Creation_of_the_Birds.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/Remedios_Varo_-_Creation_of_the_Birds.jpg",
+          "dimensions": { "width": 2500, "height": 2000 },
+          "aspectRatio": 1.25,
+          "description": "An alchemical scene depicting a figure crafting birds that come to life."
+        }
+      ]
+    },
+    {
+      "id": "Q164670",
+      "name": "Paul Delvaux",
+      "birthYear": "1897",
+      "deathYear": "1994",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Paul_Delvaux.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Paul_Delvaux.jpg",
+      "localPosition": { "x": 0.1, "y": -0.8, "z": -0.7 },
+      "artworks": [
+        {
+          "id": "Q2243",
+          "title": "The Sleeping Venus",
+          "year": "1944",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/4/4b/Paul_Delvaux_-_The_Sleeping_Venus.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/4/4b/Paul_Delvaux_-_The_Sleeping_Venus.jpg",
+          "dimensions": { "width": 3000, "height": 1800 },
+          "aspectRatio": 1.67,
+          "description": "A classical n**e surrounded by skeletons and melancholic figures in a nocturnal city."
+        }
+      ]
+    },
+    {
+      "id": "Q237996",
+      "name": "Dorothea Tanning",
+      "birthYear": "1910",
+      "deathYear": "2012",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Dorothea_Tanning.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Dorothea_Tanning.jpg",
+      "localPosition": { "x": -0.7, "y": -0.6, "z": 0.4 },
+      "artworks": [
+        {
+          "id": "Q234",
+          "title": "Eine Kleine Nachtmusik",
+          "year": "1943",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/7/77/Dorothea_Tanning_-_Eine_Kleine_Nachtmusik.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/7/77/Dorothea_Tanning_-_Eine_Kleine_Nachtmusik.jpg",
+          "dimensions": { "width": 2400, "height": 3000 },
+          "aspectRatio": 0.80,
+          "description": "A dreamlike corridor featuring giant sunflowers and uncanny childhood figures."
+        }
+      ]
+    },
+    {
+      "id": "Q165313",
+      "name": "André Masson",
+      "birthYear": "1896",
+      "deathYear": "1987",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Andre_Masson.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Andre_Masson.jpg",
+      "localPosition": { "x": 0.7, "y": -0.1, "z": 0.9 },
+      "artworks": [
+        {
+          "id": "Q4433",
+          "title": "Battle of Fishes",
+          "year": "1926",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/3/3d/Andre_Masson_-_Battle_of_Fishes.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/3/3d/Andre_Masson_-_Battle_of_Fishes.jpg",
+          "dimensions": { "width": 3000, "height": 2000 },
+          "aspectRatio": 1.50,
+          "description": "An automatic painting utilizing sand and g**e to express the brutality of w**."
         }
       ]
     }
