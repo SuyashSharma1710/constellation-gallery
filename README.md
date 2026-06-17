@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Constellation Gallery
+
+An immersive 3D web experience that visualizes art history through an interactive cosmic timeline. Navigate constellations of art periods, explore artist profiles, and walk through period-specific 3D galleries — all powered by live Wikidata and Wikimedia data.
+
+## Features
+
+- **Cosmic Timeline** — Zoom and pan through a procedurally generated 3D space where art periods are constellations and artists are stars
+- **Artist Profiles** — Typography-driven 2D overlays with biographies, portraits, and artwork previews fetched from Wikipedia
+- **Immersive 3D Gallery** — First-person exploration of period-specific galleries with museum-style lighting, physics-based navigation, and procedurally placed artworks
+- **Dual-Canvas Architecture** — Isolated R3F canvases for cosmos and gallery views, with smooth Framer Motion transitions
+- **Resilient Data Pipeline** — SPARQL queries to Wikidata with automatic fallback to curated static datasets
+- **Deep Linking** — URL-synced state via `nuqs` for shareable links (`?period=renaissance&artist=leonardo`)
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router, Turbopack) |
+| 3D Engine | Three.js, React Three Fiber, Drei, Rapier |
+| State | Zustand, nuqs |
+| Styling | Tailwind CSS v4, Framer Motion |
+| Fonts | Cinzel, Inter |
+| Image Proxy | Sharp (API route) |
+| Language | TypeScript (strict) |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server with Turbopack |
+| `npm run build` | Production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx          # Root layout with fonts
+│   ├── page.tsx            # Main entry
+│   ├── globals.css         # Tailwind + custom tokens
+│   └── api/image/route.ts  # Sharp image proxy
+├── components/
+│   ├── canvas/             # R3F Canvas wrappers (Cosmos, Gallery)
+│   ├── cosmos/             # Starfield, constellations, artist stars
+│   ├── gallery/            # Gallery room, frames, lighting, FPS controller
+│   ├── ui/                 # Overlays, loading screen, error fallback
+│   └── shared/             # Tooltip, GlassPanel
+├── lib/
+│   ├── data/               # Types, repository, Wikidata/Wikimedia clients, fallbacks
+│   ├── store/              # Zustand global state
+│   ├── textures/           # LRU texture cache
+│   ├── audio/              # AudioContext singleton
+│   ├── physics/            # Rapier world abstraction
+│   └── utils/              # Math, device detection, constants
+├── hooks/                  # usePrefetchTextures, useDevice, useAudioContext
+└── types/                  # Global type augmentations
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Dual-Canvas Rendering
 
-## Deploy on Vercel
+Two isolated R3F `<Canvas>` components prevent configuration conflicts between the cosmos orbit controls and the gallery first-person controller. A Framer Motion overlay masks the swap during state transitions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Data Pipeline
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Wikidata SPARQL** — Query for artists and artworks by art period
+2. **Wikimedia Commons API** — Resolve image URLs and dimensions
+3. **Repository Layer** — All fetching wrapped in `DataResult<T>` with fallback datasets
+4. **Image Proxy** — `/api/image` uses Sharp to resize, convert to WebP, and strip metadata
+
+### State Transitions
+
+```
+LOADING → COSMOS → ARTIST_OVERLAY → TRANSITIONING → GALLERY
+```
+
+## Performance Targets
+
+| Metric | Target |
+|---|---|
+| Cosmos FPS | 60fps (mid-range GPU) |
+| Gallery FPS | 60fps (mid-range), 30fps minimum |
+| VRAM | < 200MB peak |
+| Initial Bundle | < 5MB gzipped |
+| First Contentful Paint | < 2s (4G) |
+| Gallery Transition | < 2s |
+
+## Browser Support
+
+Chrome, Firefox, Safari, Edge (last 2 versions). WebGL 1.0 minimum required. Touch devices supported with virtual joystick controls.
+
+## License
+
+MIT
