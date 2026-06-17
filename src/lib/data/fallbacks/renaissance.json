@@ -1,1 +1,282 @@
-{}
+{
+  "id": "Q4692",
+  "name": "Renaissance",
+  "description": "A period of European cultural, artistic, political and economic rebirth following the Middle Ages.",
+  "wikidataId": "Q4692",
+  "cosmosPosition": { "x": 0, "y": 8, "z": 0 },
+  "galleryModelPath": "",
+  "artists": [
+    {
+      "id": "Q5592",
+      "name": "Sandro Botticelli",
+      "birthYear": "1445",
+      "deathYear": "1510",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Sandro_Botticelli_083.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Sandro_Botticelli_083.jpg",
+      "localPosition": { "x": 0.9, "y": 0.5, "z": 0.3 },
+      "artworks": [
+        {
+          "id": "Q5669",
+          "title": "The Birth of Venus",
+          "year": "1485",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+          "dimensions": { "width": 3000, "height": 1884 },
+          "aspectRatio": 1.59,
+          "description": "Iconic Renaissance painting depicting the g*****s Venus emerging from the sea."
+        },
+        {
+          "id": "Q5442",
+          "title": "Primavera",
+          "year": "1482",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Botticelli-primavera.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Botticelli-primavera.jpg",
+          "dimensions": { "width": 3000, "height": 1940 },
+          "aspectRatio": 1.55,
+          "description": "Allegorical painting celebrating spring with mythological figures."
+        }
+      ]
+    },
+    {
+      "id": "Q762",
+      "name": "Leonardo da Vinci",
+      "birthYear": "1452",
+      "deathYear": "1519",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Francesco_Melzi_-_Portrait_of_Leonardo.png",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Francesco_Melzi_-_Portrait_of_Leonardo.png",
+      "localPosition": { "x": -0.5, "y": 0.8, "z": 0.5 },
+      "artworks": [
+        {
+          "id": "Q12418",
+          "title": "Mona Lisa",
+          "year": "1503",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+          "dimensions": { "width": 3000, "height": 4410 },
+          "aspectRatio": 0.68,
+          "description": "Half-length portrait considered the most famous painting in the world."
+        },
+        {
+          "id": "Q128910",
+          "title": "The Last Supper",
+          "year": "1498",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg",
+          "dimensions": { "width": 3200, "height": 1600 },
+          "aspectRatio": 2.00,
+          "description": "Mural painting depicting the Last Supper of J***s with his a******s."
+        }
+      ]
+    },
+    {
+      "id": "Q5599",
+      "name": "Michelangelo",
+      "birthYear": "1475",
+      "deathYear": "1564",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg",
+      "localPosition": { "x": 0.3, "y": -0.4, "z": 0.8 },
+      "artworks": [
+        {
+          "id": "Q28514",
+          "title": "The Creation of Adam",
+          "year": "1512",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg",
+          "dimensions": { "width": 3000, "height": 1487 },
+          "aspectRatio": 2.02,
+          "description": "Fresco painting on the ceiling of the Sistine Chapel."
+        }
+      ]
+    },
+    {
+      "id": "Q58212",
+      "name": "Raphael",
+      "birthYear": "1483",
+      "deathYear": "1520",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Raffaello_Sanzio.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Raffaello_Sanzio.jpg",
+      "localPosition": { "x": -0.8, "y": 0.1, "z": -0.3 },
+      "artworks": [
+        {
+          "id": "Q9999",
+          "title": "The School of Athens",
+          "year": "1511",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
+          "dimensions": { "width": 3000, "height": 2196 },
+          "aspectRatio": 1.37,
+          "description": "Fresco representing philosophy with famous ancient Greek thinkers."
+        }
+      ]
+    },
+    {
+      "id": "Q1191",
+      "name": "Titian",
+      "birthYear": "1488",
+      "deathYear": "1576",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Titian_Self-Portrait.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Titian_Self-Portrait.jpg",
+      "localPosition": { "x": 0.5, "y": -0.7, "z": -0.2 },
+      "artworks": [
+        {
+          "id": "Q23456",
+          "title": "Venus of Urbino",
+          "year": "1534",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Tizian_102.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Tizian_102.jpg",
+          "dimensions": { "width": 3000, "height": 2320 },
+          "aspectRatio": 1.29,
+          "description": "Oil painting of a n**e young w***n, identified with the g*****s Venus."
+        }
+      ]
+    },
+    {
+      "id": "Q102272",
+      "name": "Jan van Eyck",
+      "birthYear": "1390",
+      "deathYear": "1441",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Portrait_of_a_Man_in_a_Turban_%28Jan_van_Eyck%29_with_frame.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Portrait_of_a_Man_in_a_Turban_%28Jan_van_Eyck%29_with_frame.jpg",
+      "localPosition": { "x": -0.6, "y": -0.3, "z": 0.7 },
+      "artworks": [
+        {
+          "id": "Q220859",
+          "title": "The Arnolfini Portrait",
+          "year": "1434",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg",
+          "dimensions": { "width": 2000, "height": 2724 },
+          "aspectRatio": 0.73,
+          "description": "An intricate double portrait of the Italian merchant Giovanni di Nicolao Arnolfini and his spouse."
+        }
+      ]
+    },
+    {
+      "id": "Q5580",
+      "name": "Albrecht Dürer",
+      "birthYear": "1471",
+      "deathYear": "1528",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Albrecht_D%C3%BCrer_-_1500_self-portrait_%28High_resolution_and_detail%29.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Albrecht_D%C3%BCrer_-_1500_self-portrait_%28High_resolution_and_detail%29.jpg",
+      "localPosition": { "x": 0.7, "y": 0.6, "z": -0.5 },
+      "artworks": [
+        {
+          "id": "Q625890",
+          "title": "Melencolia I",
+          "year": "1514",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Albrecht_D%C3%BCrer_-_Melencolia_I_-_Google_Art_Project.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Albrecht_D%C3%BCrer_-_Melencolia_I_-_Google_Art_Project.jpg",
+          "dimensions": { "width": 2400, "height": 3100 },
+          "aspectRatio": 0.77,
+          "description": "A complex engraving featuring an allegorical figure representing melancholy."
+        }
+      ]
+    },
+    {
+      "id": "Q130834",
+      "name": "Hieronymus Bosch",
+      "birthYear": "1450",
+      "deathYear": "1516",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Jheronimus_Bosch.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Jheronimus_Bosch.jpg",
+      "localPosition": { "x": -0.4, "y": -0.8, "z": -0.4 },
+      "artworks": [
+        {
+          "id": "Q321303",
+          "title": "The Garden of Earthly Delights",
+          "year": "1515",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg",
+          "dimensions": { "width": 3000, "height": 1720 },
+          "aspectRatio": 1.74,
+          "description": "A surreal triptych depicting paradise, earthly t*********s, and h**l."
+        }
+      ]
+    },
+    {
+      "id": "Q43270",
+      "name": "Pieter Bruegel the Elder",
+      "birthYear": "1525",
+      "deathYear": "1569",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_Portrait.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Pieter_Bruegel_the_Elder_-_Portrait.jpg",
+      "localPosition": { "x": 0.8, "y": -0.2, "z": 0.6 },
+      "artworks": [
+        {
+          "id": "Q534208",
+          "title": "Hunters in the Snow",
+          "year": "1565",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_%28Winter%29_-_Google_Art_Project.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_%28Winter%29_-_Google_Art_Project.jpg",
+          "dimensions": { "width": 3000, "height": 2130 },
+          "aspectRatio": 1.41,
+          "description": "A famous winter landscape showing hunters returning to a village."
+        }
+      ]
+    },
+    {
+      "id": "Q9319",
+      "name": "Tintoretto",
+      "birthYear": "1518",
+      "deathYear": "1594",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Tintoretto_self_portrait.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Tintoretto_self_portrait.jpg",
+      "localPosition": { "x": -0.2, "y": 0.4, "z": -0.8 },
+      "artworks": [
+        {
+          "id": "Q1753767",
+          "title": "The Last Supper",
+          "year": "1594",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Jacopo_Tintoretto_-_The_Last_Supper_-_WGA22649.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Jacopo_Tintoretto_-_The_Last_Supper_-_WGA22649.jpg",
+          "dimensions": { "width": 3000, "height": 2040 },
+          "aspectRatio": 1.47,
+          "description": "A dynamic, diagonal composition of the final meal of C****t."
+        }
+      ]
+    },
+    {
+      "id": "Q174880",
+      "name": "Masaccio",
+      "birthYear": "1401",
+      "deathYear": "1428",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Masaccio_self_portrait.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Masaccio_self_portrait.jpg",
+      "localPosition": { "x": 0.4, "y": 0.2, "z": -0.6 },
+      "artworks": [
+        {
+          "id": "Q2344199",
+          "title": "The Tribute Money",
+          "year": "1425",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Masaccio_-_The_Tribute_Money.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Masaccio_-_The_Tribute_Money.jpg",
+          "dimensions": { "width": 3000, "height": 1390 },
+          "aspectRatio": 2.16,
+          "description": "An early fresco demonstrating linear perspective and religious storytelling."
+        }
+      ]
+    },
+    {
+      "id": "Q8459",
+      "name": "Giorgione",
+      "birthYear": "1477",
+      "deathYear": "1510",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Giorgione_Self-portrait.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Giorgione_Self-portrait.jpg",
+      "localPosition": { "x": -0.8, "y": -0.6, "z": 0.2 },
+      "artworks": [
+        {
+          "id": "Q235555",
+          "title": "The Tempest",
+          "year": "1508",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Giorgione_-_The_Tempest_-_Gallerie_dell%27Accademia_Venice.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Giorgione_-_The_Tempest_-_Gallerie_dell%27Accademia_Venice.jpg",
+          "dimensions": { "width": 2500, "height": 2680 },
+          "aspectRatio": 0.93,
+          "description": "An enigmatic pastoral scene featuring a n**e w***n nursing a baby during a storm."
+        }
+      ]
+    }
+  ]
+}

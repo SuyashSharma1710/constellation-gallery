@@ -1,0 +1,240 @@
+{
+  "id": "Q38166",
+  "name": "Modern Art",
+  "description": "Artistic works produced during the period extending roughly from the 1860s to the 1970s.",
+  "wikidataId": "Q38166",
+  "cosmosPosition": { "x": 0, "y": 8, "z": 0 },
+  "galleryModelPath": "",
+  "artists": [
+    {
+      "id": "Q5593",
+      "name": "Pablo Picasso",
+      "birthYear": "1881",
+      "deathYear": "1973",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Pablo_picasso_1.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Pablo_picasso_1.jpg",
+      "localPosition": { "x": 0.5, "y": 0.4, "z": 0.3 },
+      "artworks": [
+        {
+          "id": "Q17516",
+          "title": "Guernica",
+          "year": "1937",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg",
+          "dimensions": { "width": 3000, "height": 1370 },
+          "aspectRatio": 2.19,
+          "description": "Large 1937 anti-w** oil painting depicting the bombing of Guernica during the Spanish Civil W**."
+        },
+        {
+          "id": "Q902",
+          "title": "Les Demoiselles d'Avignon",
+          "year": "1907",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/4/4c/Les_Demoiselles_d%27Avignon.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/4/4c/Les_Demoiselles_d%27Avignon.jpg",
+          "dimensions": { "width": 3000, "height": 2930 },
+          "aspectRatio": 1.02,
+          "description": "Pro*****ist painting depicting five n**e f****e p*********s."
+        }
+      ]
+    },
+    {
+      "id": "Q5582",
+      "name": "Vincent van Gogh",
+      "birthYear": "1853",
+      "deathYear": "1890",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg",
+      "localPosition": { "x": -0.6, "y": 0.5, "z": 0.4 },
+      "artworks": [
+        {
+          "id": "Q108879",
+          "title": "The Starry Night",
+          "year": "1889",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+          "dimensions": { "width": 3000, "height": 2380 },
+          "aspectRatio": 1.26,
+          "description": "Oil on canvas depicting the view from the east-facing window of his a****m room."
+        },
+        {
+          "id": "Q156428",
+          "title": "Sunflowers",
+          "year": "1888",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Vincent_Willem_van_Gogh_127.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Vincent_Willem_van_Gogh_127.jpg",
+          "dimensions": { "width": 3000, "height": 3810 },
+          "aspectRatio": 0.79,
+          "description": "One of the most famous flower still life paintings in the world."
+        }
+      ]
+    },
+    {
+      "id": "Q301",
+      "name": "Henri Matisse",
+      "birthYear": "1869",
+      "deathYear": "1954",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Portrait_of_Henri_Matisse_1933_May_20.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Portrait_of_Henri_Matisse_1933_May_20.jpg",
+      "localPosition": { "x": 0.3, "y": -0.5, "z": 0.6 },
+      "artworks": [
+        {
+          "id": "Q12345",
+          "title": "The Dance",
+          "year": "1910",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/4/40/Matisse_dance.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/4/40/Matisse_dance.jpg",
+          "dimensions": { "width": 3000, "height": 2000 },
+          "aspectRatio": 1.5,
+          "description": "Large decorative panel showing five dancing figures in a circle."
+        }
+      ]
+    },
+    {
+      "id": "Q41264",
+      "name": "Wassily Kandinsky",
+      "birthYear": "1866",
+      "deathYear": "1944",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg",
+      "localPosition": { "x": -0.7, "y": -0.2, "z": -0.3 },
+      "artworks": [
+        {
+          "id": "Q234567",
+          "title": "Composition VII",
+          "year": "1913",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg",
+          "dimensions": { "width": 3000, "height": 2100 },
+          "aspectRatio": 1.43,
+          "description": "Considered the pinnacle of Kandinsky's pre-W*******r I artistic achievement."
+        }
+      ]
+    },
+    {
+      "id": "Q5577",
+      "name": "Salvador Dalí",
+      "birthYear": "1904",
+      "deathYear": "1989",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Salvador_Dal%C3%AD_1939.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Salvador_Dal%C3%AD_1939.jpg",
+      "localPosition": { "x": 0.8, "y": 0.2, "z": -0.5 },
+      "artworks": [
+        {
+          "id": "Q257943",
+          "title": "The Persistence of Memory",
+          "year": "1931",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/d/dd/The_Persistence_of_Memory.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/d/dd/The_Persistence_of_Memory.jpg",
+          "dimensions": { "width": 2400, "height": 1800 },
+          "aspectRatio": 1.33,
+          "description": "Surrealist painting featuring iconic melting pocket watches in a dreamlike landscape."
+        }
+      ]
+    },
+    {
+      "id": "Q296",
+      "name": "Claude Monet",
+      "birthYear": "1840",
+      "deathYear": "1926",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Claude_Monet_1899_Nadar_crop.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Claude_Monet_1899_Nadar_crop.jpg",
+      "localPosition": { "x": -0.4, "y": -0.6, "z": 0.8 },
+      "artworks": [
+        {
+          "id": "Q327533",
+          "title": "Impression, Sunrise",
+          "year": "1872",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg",
+          "dimensions": { "width": 3000, "height": 2350 },
+          "aspectRatio": 1.27,
+          "description": "The foundational painting that gave the Impressionist movement its name."
+        }
+      ]
+    },
+    {
+      "id": "Q5588",
+      "name": "Frida Kahlo",
+      "birthYear": "1907",
+      "deathYear": "1954",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg",
+      "localPosition": { "x": 0.1, "y": 0.9, "z": -0.2 },
+      "artworks": [
+        {
+          "id": "Q20670932",
+          "title": "The Two Fridas",
+          "year": "1939",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/e/e0/The_Two_Fridas.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/e/e0/The_Two_Fridas.jpg",
+          "dimensions": { "width": 2500, "height": 2490 },
+          "aspectRatio": 1.00,
+          "description": "A striking double self-portrait exploring her dual cultural heritage and deep personal pain."
+        }
+      ]
+    },
+    {
+      "id": "Q41406",
+      "name": "Edvard Munch",
+      "birthYear": "1863",
+      "deathYear": "1944",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Edvard_Munch_1933.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Edvard_Munch_1933.jpg",
+      "localPosition": { "x": -0.8, "y": 0.3, "z": -0.7 },
+      "artworks": [
+        {
+          "id": "Q174704",
+          "title": "The Scream",
+          "year": "1893",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg",
+          "dimensions": { "width": 2100, "height": 2600 },
+          "aspectRatio": 0.81,
+          "description": "Expressionist masterpiece featuring an a*******d figure against a blood-red sky."
+        }
+      ]
+    },
+    {
+      "id": "Q37571",
+      "name": "Jackson Pollock",
+      "birthYear": "1912",
+      "deathYear": "1956",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Jackson_Pollock_1928.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Jackson_Pollock_1928.jpg",
+      "localPosition": { "x": 0.6, "y": -0.8, "z": 0.1 },
+      "artworks": [
+        {
+          "id": "Q4827181",
+          "title": "Autumn Rhythm (Number 30)",
+          "year": "1950",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/e/ee/Autumn_Rhythm_%28Number_30%29.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/e/ee/Autumn_Rhythm_%28Number_30%29.jpg",
+          "dimensions": { "width": 3000, "height": 1300 },
+          "aspectRatio": 2.31,
+          "description": "A monumental example of Abstract Expressionist drip painting."
+        }
+      ]
+    },
+    {
+      "id": "Q151803",
+      "name": "Piet Mondrian",
+      "birthYear": "1872",
+      "deathYear": "1944",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Piet_Mondriaan.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Piet_Mondriaan.jpg",
+      "localPosition": { "x": -0.2, "y": -0.9, "z": -0.6 },
+      "artworks": [
+        {
+          "id": "Q17491176",
+          "title": "Composition with Red, Blue, and Yellow",
+          "year": "1930",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg",
+          "dimensions": { "width": 2000, "height": 2000 },
+          "aspectRatio": 1.00,
+          "description": "A defining De Stijl work utilizing purely geometric grids and primary colors."
+        }
+      ]
+    }
+  ]
+}

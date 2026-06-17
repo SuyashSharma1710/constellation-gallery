@@ -1,1 +1,262 @@
-{}
+{
+  "id": "Q37853",
+  "name": "Baroque",
+  "description": "A highly ornate and extravagant style of architecture, art and music that flourished in Europe.",
+  "wikidataId": "Q37853",
+  "cosmosPosition": { "x": 0, "y": 8, "z": 0 },
+  "galleryModelPath": "",
+  "artists": [
+    {
+      "id": "Q99",
+      "name": "Caravaggio",
+      "birthYear": "1571",
+      "deathYear": "1610",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Caravaggio_-_Self-portrait_as_the_Sick_Bacchus.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Caravaggio_-_Self-portrait_as_the_Sick_Bacchus.jpg",
+      "localPosition": { "x": 0.7, "y": 0.3, "z": 0.2 },
+      "artworks": [
+        {
+          "id": "Q1352",
+          "title": "The Calling of Saint Matthew",
+          "year": "1600",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/The_Calling_of_Saint_Matthew-Caravaggo_%281599-1600%29.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/The_Calling_of_Saint_Matthew-Caravaggo_%281599-1600%29.jpg",
+          "dimensions": { "width": 3000, "height": 2950 },
+          "aspectRatio": 1.02,
+          "description": "Masterpiece depicting the moment Jesus Christ inspires Matthew to follow him."
+        }
+      ]
+    },
+    {
+      "id": "Q5598",
+      "name": "Rembrandt",
+      "birthYear": "1606",
+      "deathYear": "1669",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg",
+      "localPosition": { "x": -0.6, "y": 0.5, "z": 0.4 },
+      "artworks": [
+        {
+          "id": "Q185372",
+          "title": "The Night Watch",
+          "year": "1642",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/The_Night_Watch_-_HD.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/The_Night_Watch_-_HD.jpg",
+          "dimensions": { "width": 3000, "height": 2500 },
+          "aspectRatio": 1.2,
+          "description": "Famous group portrait of a militia company with dynamic lighting."
+        }
+      ]
+    },
+    {
+      "id": "Q129004",
+      "name": "Peter Paul Rubens",
+      "birthYear": "1577",
+      "deathYear": "1640",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Peter_Paul_Rubens_-_Self-Portrait_-_Google_Art_Project.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Peter_Paul_Rubens_-_Self-Portrait_-_Google_Art_Project.jpg",
+      "localPosition": { "x": 0.2, "y": -0.5, "z": 0.6 },
+      "artworks": [
+        {
+          "id": "Q147937",
+          "title": "The Descent from the Cross",
+          "year": "1614",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Peter_Paul_Rubens_-_Descent_from_the_Cross_-_WGA20310.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Peter_Paul_Rubens_-_Descent_from_the_Cross_-_WGA20310.jpg",
+          "dimensions": { "width": 3000, "height": 3860 },
+          "aspectRatio": 0.78,
+          "description": "Triptych painting depicting the descent of Christ from the cross."
+        }
+      ]
+    },
+    {
+      "id": "Q297",
+      "name": "Diego Velázquez",
+      "birthYear": "1599",
+      "deathYear": "1660",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Diego_Vel%C3%A1zquez_-_Self-portrait_-_WGA24407.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Diego_Vel%C3%A1zquez_-_Self-portrait_-_WGA24407.jpg",
+      "localPosition": { "x": -0.3, "y": -0.6, "z": -0.4 },
+      "artworks": [
+        {
+          "id": "Q208758",
+          "title": "Las Meninas",
+          "year": "1656",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg",
+          "dimensions": { "width": 3000, "height": 2560 },
+          "aspectRatio": 1.17,
+          "description": "Masterpiece of Western painting depicting the Spanish royal family."
+        }
+      ]
+    },
+    {
+      "id": "Q5591",
+      "name": "Johannes Vermeer",
+      "birthYear": "1632",
+      "deathYear": "1675",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Johannes_Vermeer_-_The_Procuress_-_Google_Art_Project.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Johannes_Vermeer_-_The_Procuress_-_Google_Art_Project.jpg",
+      "localPosition": { "x": 0.8, "y": -0.1, "z": -0.3 },
+      "artworks": [
+        {
+          "id": "Q18808",
+          "title": "Girl with a Pearl Earring",
+          "year": "1665",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/1665_Girl_with_a_Pearl_Earring.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/1665_Girl_with_a_Pearl_Earring.jpg",
+          "dimensions": { "width": 3000, "height": 4080 },
+          "aspectRatio": 0.74,
+          "description": "One of the most famous paintings, often called the Mona Lisa of the North."
+        }
+      ]
+    },
+    {
+      "id": "Q23449",
+      "name": "Artemisia Gentileschi",
+      "birthYear": "1593",
+      "deathYear": "1653",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Artemisia_Gentileschi_-_Self_Portrait_as_a_Lute_Player.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Artemisia_Gentileschi_-_Self_Portrait_as_a_Lute_Player.jpg",
+      "localPosition": { "x": -0.8, "y": -0.4, "z": 0.5 },
+      "artworks": [
+        {
+          "id": "Q2273183",
+          "title": "Judith S*****g Holofernes",
+          "year": "1612",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Artemisia_Gentileschi_-_Judith_Beheading_Holofernes_-_Uffizi.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Artemisia_Gentileschi_-_Judith_Beheading_Holofernes_-_Uffizi.jpg",
+          "dimensions": { "width": 2500, "height": 3000 },
+          "aspectRatio": 0.83,
+          "description": "A powerful and visceral painting depicting the b*******g of an Assyrian general."
+        }
+      ]
+    },
+    {
+      "id": "Q160538",
+      "name": "Gian Lorenzo Bernini",
+      "birthYear": "1598",
+      "deathYear": "1680",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg",
+      "localPosition": { "x": 0.4, "y": 0.7, "z": -0.5 },
+      "artworks": [
+        {
+          "id": "Q181702",
+          "title": "The Ecstasy of Saint Teresa",
+          "year": "1652",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Estasi_di_Santa_Teresa.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Estasi_di_Santa_Teresa.jpg",
+          "dimensions": { "width": 2000, "height": 3000 },
+          "aspectRatio": 0.66,
+          "description": "Iconic Baroque marble masterpiece capturing intense spiritual p*****n."
+        }
+      ]
+    },
+    {
+      "id": "Q125134",
+      "name": "Nicolas Poussin",
+      "birthYear": "1594",
+      "deathYear": "1665",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Nicolas_Poussin_-_Self-Portrait_-_WGA18306.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Nicolas_Poussin_-_Self-Portrait_-_WGA18306.jpg",
+      "localPosition": { "x": 0.1, "y": -0.8, "z": -0.7 },
+      "artworks": [
+        {
+          "id": "Q2344799",
+          "title": "Et in Arcadia ego",
+          "year": "1637",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Nicolas_Poussin_-_Et_in_Arcadia_ego_%28deuxi%C3%A8me_version%29.jpg",
+          "dimensions": { "width": 3000, "height": 2200 },
+          "aspectRatio": 1.36,
+          "description": "Classical Baroque painting featuring shepherds examining a t**b in a pastoral landscape."
+        }
+      ]
+    },
+    {
+      "id": "Q150679",
+      "name": "Anthony van Dyck",
+      "birthYear": "1599",
+      "deathYear": "1641",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Anthony_van_Dyck_-_Self-portrait_-_WGA07421.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Anthony_van_Dyck_-_Self-portrait_-_WGA07421.jpg",
+      "localPosition": { "x": -0.7, "y": 0.1, "z": -0.8 },
+      "artworks": [
+        {
+          "id": "Q2959451",
+          "title": "Charles I at the Hunt",
+          "year": "1635",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Charles_I_at_the_Hunt%2C_by_Anthony_van_Dyck.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Charles_I_at_the_Hunt%2C_by_Anthony_van_Dyck.jpg",
+          "dimensions": { "width": 2500, "height": 3000 },
+          "aspectRatio": 0.83,
+          "description": "Elegant portrait of the English monarch before the Civil W**."
+        }
+      ]
+    },
+    {
+      "id": "Q167654",
+      "name": "Frans Hals",
+      "birthYear": "1582",
+      "deathYear": "1666",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Frans_Hals_-_Self-Portrait_-_WGA11079.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Frans_Hals_-_Self-Portrait_-_WGA11079.jpg",
+      "localPosition": { "x": 0.5, "y": -0.3, "z": 0.8 },
+      "artworks": [
+        {
+          "id": "Q3221085",
+          "title": "The Laughing Cavalier",
+          "year": "1624",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Frans_Hals_-_The_Laughing_Cavalier_-_WGA11093.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Frans_Hals_-_The_Laughing_Cavalier_-_WGA11093.jpg",
+          "dimensions": { "width": 2300, "height": 3000 },
+          "aspectRatio": 0.76,
+          "description": "Famous portrait noted for its lively brushwork and subtle, enigmatic smile."
+        }
+      ]
+    },
+    {
+      "id": "Q315053",
+      "name": "Georges de La Tour",
+      "birthYear": "1593",
+      "deathYear": "1652",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Georges_de_La_Tour_-_Self-portrait_-_WGA12351.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Georges_de_La_Tour_-_Self-portrait_-_WGA12351.jpg",
+      "localPosition": { "x": -0.2, "y": 0.8, "z": -0.2 },
+      "artworks": [
+        {
+          "id": "Q3210344",
+          "title": "The Magdalen with the Smoking Flame",
+          "year": "1640",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Georges_de_La_Tour_-_The_Magdalen_with_the_Smoking_Flame.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Georges_de_La_Tour_-_The_Magdalen_with_the_Smoking_Flame.jpg",
+          "dimensions": { "width": 2200, "height": 3000 },
+          "aspectRatio": 0.73,
+          "description": "A meditative chiaroscuro masterpiece contemplating m*******y."
+        }
+      ]
+    },
+    {
+      "id": "Q192067",
+      "name": "Bartolomé Esteban Murillo",
+      "birthYear": "1617",
+      "deathYear": "1682",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Bartolom%C3%A9_Esteban_Perez_Murillo_024.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Bartolom%C3%A9_Esteban_Perez_Murillo_024.jpg",
+      "localPosition": { "x": 0.9, "y": 0.5, "z": 0.6 },
+      "artworks": [
+        {
+          "id": "Q3224443",
+          "title": "The Young Beggar",
+          "year": "1645",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Bartolom%C3%A9_Esteban_Murillo_-_The_Young_Beggar_-_WGA16365.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Bartolom%C3%A9_Esteban_Murillo_-_The_Young_Beggar_-_WGA16365.jpg",
+          "dimensions": { "width": 2100, "height": 3000 },
+          "aspectRatio": 0.70,
+          "description": "Poignant scene of a street child, highlighting the p*****y of the era."
+        }
+      ]
+    }
+  ]
+}

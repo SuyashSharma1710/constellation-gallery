@@ -1,0 +1,104 @@
+{
+  "id": "Q39427",
+  "name": "Surrealism",
+  "description": "A cultural movement that developed in Europe after World War I, known for unexpected juxtapositions.",
+  "wikidataId": "Q39427",
+  "cosmosPosition": { "x": 0, "y": 8, "z": 0 },
+  "galleryModelPath": "",
+  "artists": [
+    {
+      "id": "Q5577",
+      "name": "Salvador Dali",
+      "birthYear": "1904",
+      "deathYear": "1989",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Salvador_Dal%C3%AD_1939.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Salvador_Dal%C3%AD_1939.jpg",
+      "localPosition": { "x": 0.5, "y": 0.4, "z": 0.3 },
+      "artworks": [
+        {
+          "id": "Q154015",
+          "title": "The Persistence of Memory",
+          "year": "1931",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/d/dd/The_Persistence_of_Memory.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/d/dd/The_Persistence_of_Memory.jpg",
+          "dimensions": { "width": 3000, "height": 2180 },
+          "aspectRatio": 1.38,
+          "description": "Iconic surrealist painting featuring melting clocks in a desert landscape."
+        }
+      ]
+    },
+    {
+      "id": "Q42048",
+      "name": "Rene Magritte",
+      "birthYear": "1898",
+      "deathYear": "1967",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Ren%C3%A9_Magritte.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Ren%C3%A9_Magritte.jpg",
+      "localPosition": { "x": -0.6, "y": 0.3, "z": 0.5 },
+      "artworks": [
+        {
+          "id": "Q33438",
+          "title": "The Son of Man",
+          "year": "1964",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/e/e5/Magritte_TheSonOfMan.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/e/e5/Magritte_TheSonOfMan.jpg",
+          "dimensions": { "width": 3000, "height": 3860 },
+          "aspectRatio": 0.78,
+          "description": "Self-portrait of a man in an overcoat with a green apple obscuring his face."
+        },
+        {
+          "id": "Q3345",
+          "title": "The Treachery of Images",
+          "year": "1929",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg",
+          "dimensions": { "width": 3000, "height": 2200 },
+          "aspectRatio": 1.36,
+          "description": "Painting of a pipe with the caption 'Ceci n'est pas une pipe'."
+        }
+      ]
+    },
+    {
+      "id": "Q151558",
+      "name": "Joan Miro",
+      "birthYear": "1893",
+      "deathYear": "1983",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Portrait_of_Joan_Mir%C3%B3%2C_Barcelona_1935_June_13.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Portrait_of_Joan_Mir%C3%B3%2C_Barcelona_1935_June_13.jpg",
+      "localPosition": { "x": 0.2, "y": -0.5, "z": 0.6 },
+      "artworks": [
+        {
+          "id": "Q12345",
+          "title": "The Harlequin's Carnival",
+          "year": "1925",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/0/0b/Joan_Miro_-_Carnaval_d%27Arlequin.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/0/0b/Joan_Miro_-_Carnaval_d%27Arlequin.jpg",
+          "dimensions": { "width": 3000, "height": 2300 },
+          "aspectRatio": 1.3,
+          "description": "One of Miro's best-known surrealist works with biomorphic forms."
+        }
+      ]
+    },
+    {
+      "id": "Q165709",
+      "name": "Max Ernst",
+      "birthYear": "1891",
+      "deathYear": "1976",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Max_Ernst_1968.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Max_Ernst_1968.jpg",
+      "localPosition": { "x": -0.4, "y": -0.3, "z": -0.4 },
+      "artworks": [
+        {
+          "id": "Q23456",
+          "title": "The Elephant Celebes",
+          "year": "1921",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/en/4/4e/The_Elephant_Celebes.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/4/4e/The_Elephant_Celebes.jpg",
+          "dimensions": { "width": 3000, "height": 2400 },
+          "aspectRatio": 1.25,
+          "description": "Early surrealist masterpiece combining mechanical and organic forms."
+        }
+      ]
+    }
+  ]
+}

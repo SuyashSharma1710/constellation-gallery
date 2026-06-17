@@ -1,0 +1,230 @@
+{
+  "id": "Q40415",
+  "name": "Impressionism",
+  "description": "A 19th-century art movement characterized by small, thin brush strokes and emphasis on light.",
+  "wikidataId": "Q40415",
+  "cosmosPosition": { "x": 0, "y": 8, "z": 0 },
+  "galleryModelPath": "",
+  "artists": [
+    {
+      "id": "Q40",
+      "name": "Claude Monet",
+      "birthYear": "1840",
+      "deathYear": "1926",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Claude_Monet_1899_Nadar_crop.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Claude_Monet_1899_Nadar_crop.jpg",
+      "localPosition": { "x": 0.5, "y": 0.4, "z": 0.3 },
+      "artworks": [
+        {
+          "id": "Q328523",
+          "title": "Impression, Sunrise",
+          "year": "1872",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg",
+          "dimensions": { "width": 3000, "height": 2215 },
+          "aspectRatio": 1.35,
+          "description": "The painting that gave the Impressionist movement its name."
+        },
+        {
+          "id": "Q239303",
+          "title": "Water Lilies",
+          "year": "1919",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Claude_Monet_-_Water_Lilies_%281919%29.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Claude_Monet_-_Water_Lilies_%281919%29.jpg",
+          "dimensions": { "width": 3000, "height": 2150 },
+          "aspectRatio": 1.40,
+          "description": "Series of approximately 250 oil paintings of Monet's flower garden at Giverny."
+        }
+      ]
+    },
+    {
+      "id": "Q39931",
+      "name": "Pierre-Auguste Renoir",
+      "birthYear": "1841",
+      "deathYear": "1919",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Pierre-Auguste_Renoir_-_Autoportrait_%281876%29.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Pierre-Auguste_Renoir_-_Autoportrait_%281876%29.jpg",
+      "localPosition": { "x": -0.4, "y": 0.5, "z": 0.5 },
+      "artworks": [
+        {
+          "id": "Q1137",
+          "title": "Bal du moulin de la Galette",
+          "year": "1876",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Pierre-Auguste_Renoir%2C_Le_Moulin_de_la_Galette.jpg",
+          "dimensions": { "width": 3000, "height": 2230 },
+          "aspectRatio": 1.35,
+          "description": "Depiction of a typical Sunday afternoon at the Moulin de la Galette in Montmartre."
+        }
+      ]
+    },
+    {
+      "id": "Q34618",
+      "name": "Edgar Degas",
+      "birthYear": "1834",
+      "deathYear": "1917",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Edgar_Degas_self_portrait_1855.jpeg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Edgar_Degas_self_portrait_1855.jpeg",
+      "localPosition": { "x": 0.1, "y": -0.5, "z": 0.7 },
+      "artworks": [
+        {
+          "id": "Q59070",
+          "title": "The Dance Class",
+          "year": "1874",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Edgar_Degas_-_The_Dance_Class_%28La_Classe_de_Danse%29_-_Google_Art_Project.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Edgar_Degas_-_The_Dance_Class_%28La_Classe_de_Danse%29_-_Google_Art_Project.jpg",
+          "dimensions": { "width": 3000, "height": 2490 },
+          "aspectRatio": 1.20,
+          "description": "Painting of ballet dancers in a rehearsal room."
+        }
+      ]
+    },
+    {
+      "id": "Q320303",
+      "name": "Camille Pissarro",
+      "birthYear": "1830",
+      "deathYear": "1903",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Camille_Pissarro_040.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Camille_Pissarro_040.jpg",
+      "localPosition": { "x": -0.7, "y": -0.2, "z": -0.3 },
+      "artworks": [
+        {
+          "id": "Q185725",
+          "title": "Boulevard Montmartre",
+          "year": "1897",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Camille_Pissarro_-_Boulevard_Montmartre_-_Eremitage.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Camille_Pissarro_-_Boulevard_Montmartre_-_Eremitage.jpg",
+          "dimensions": { "width": 3000, "height": 2400 },
+          "aspectRatio": 1.25,
+          "description": "Series of paintings showing the view from his hotel window of the Boulevard Montmartre."
+        }
+      ]
+    },
+    {
+      "id": "Q40599",
+      "name": "Édouard Manet",
+      "birthYear": "1832",
+      "deathYear": "1883",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Edouard_Manet%2C_en_buste%2C_de_face.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Edouard_Manet%2C_en_buste%2C_de_face.jpg",
+      "localPosition": { "x": 0.6, "y": -0.6, "z": 0.2 },
+      "artworks": [
+        {
+          "id": "Q1247414",
+          "title": "A Bar at the Folies-Bergère",
+          "year": "1882",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Edouard_Manet%2C_A_Bar_at_the_Folies-Berg%C3%A8re.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Edouard_Manet%2C_A_Bar_at_the_Folies-Berg%C3%A8re.jpg",
+          "dimensions": { "width": 3000, "height": 2225 },
+          "aspectRatio": 1.35,
+          "description": "A masterwork depicting a barmaid at the famous Folies Bergère nightclub."
+        }
+      ]
+    },
+    {
+      "id": "Q173223",
+      "name": "Mary Cassatt",
+      "birthYear": "1844",
+      "deathYear": "1926",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Mary_Cassatt.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Mary_Cassatt.jpg",
+      "localPosition": { "x": -0.5, "y": -0.8, "z": -0.5 },
+      "artworks": [
+        {
+          "id": "Q3823485",
+          "title": "The Child's Bath",
+          "year": "1893",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg",
+          "dimensions": { "width": 2000, "height": 3000 },
+          "aspectRatio": 0.67,
+          "description": "An intimate depiction of a mother bathing her child, reflecting Japanese print aesthetics."
+        }
+      ]
+    },
+    {
+      "id": "Q104994",
+      "name": "Berthe Morisot",
+      "birthYear": "1841",
+      "deathYear": "1895",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Berthe_Morisot_-_Edouard_Manet.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Berthe_Morisot_-_Edouard_Manet.jpg",
+      "localPosition": { "x": 0.8, "y": 0.1, "z": -0.6 },
+      "artworks": [
+        {
+          "id": "Q1787114",
+          "title": "The Cradle",
+          "year": "1872",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Berthe_Morisot_-_Le_Berceau_-_Google_Art_Project.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Berthe_Morisot_-_Le_Berceau_-_Google_Art_Project.jpg",
+          "dimensions": { "width": 2500, "height": 3000 },
+          "aspectRatio": 0.83,
+          "description": "A tender portrait of the artist's sister watching over her sleeping infant."
+        }
+      ]
+    },
+    {
+      "id": "Q175130",
+      "name": "Alfred Sisley",
+      "birthYear": "1839",
+      "deathYear": "1899",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Alfred_Sisley.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Alfred_Sisley.jpg",
+      "localPosition": { "x": -0.8, "y": 0.6, "z": -0.2 },
+      "artworks": [
+        {
+          "id": "Q2288302",
+          "title": "Snow at Louveciennes",
+          "year": "1874",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Alfred_Sisley_-_Snow_at_Louveciennes_-_Google_Art_Project.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Alfred_Sisley_-_Snow_at_Louveciennes_-_Google_Art_Project.jpg",
+          "dimensions": { "width": 3000, "height": 2350 },
+          "aspectRatio": 1.28,
+          "description": "A quintessential Impressionist snowscape capturing winter light and atmosphere."
+        }
+      ]
+    },
+    {
+      "id": "Q295144",
+      "name": "Gustave Caillebotte",
+      "birthYear": "1848",
+      "deathYear": "1894",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Gustave_Caillebotte_-_Self-Portrait_-_Google_Art_Project.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Gustave_Caillebotte_-_Self-Portrait_-_Google_Art_Project.jpg",
+      "localPosition": { "x": 0.2, "y": 0.8, "z": 0.8 },
+      "artworks": [
+        {
+          "id": "Q1091560",
+          "title": "Paris Street; Rainy Day",
+          "year": "1877",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Gustave_Caillebotte_-_Paris_Street%3B_Rainy_Day_-_Google_Art_Project.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Gustave_Caillebotte_-_Paris_Street%3B_Rainy_Day_-_Google_Art_Project.jpg",
+          "dimensions": { "width": 3000, "height": 2280 },
+          "aspectRatio": 1.32,
+          "description": "A large, highly calculated depiction of a Parisian intersection in the rain."
+        }
+      ]
+    },
+    {
+      "id": "Q35548",
+      "name": "Paul Cézanne",
+      "birthYear": "1839",
+      "deathYear": "1906",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Paul_C%C3%A9zanne_1861.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Paul_C%C3%A9zanne_1861.jpg",
+      "localPosition": { "x": -0.2, "y": -0.4, "z": -0.8 },
+      "artworks": [
+        {
+          "id": "Q363842",
+          "title": "The Basket of Apples",
+          "year": "1893",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Paul_C%C3%A9zanne_-_The_Basket_of_Apples_-_Google_Art_Project.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Paul_C%C3%A9zanne_-_The_Basket_of_Apples_-_Google_Art_Project.jpg",
+          "dimensions": { "width": 3000, "height": 2380 },
+          "aspectRatio": 1.26,
+          "description": "A still life that breaks traditional perspective, laying the groundwork for later modern movements."
+        }
+      ]
+    }
+  ]
+}

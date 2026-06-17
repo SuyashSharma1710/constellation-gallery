@@ -1,0 +1,220 @@
+{
+  "id": "Q37068",
+  "name": "Romanticism",
+  "description": "An artistic, literary, musical and intellectual movement emphasizing emotion and individualism.",
+  "wikidataId": "Q37068",
+  "cosmosPosition": { "x": 0, "y": 8, "z": 0 },
+  "galleryModelPath": "",
+  "artists": [
+    {
+      "id": "Q129797",
+      "name": "Eugène Delacroix",
+      "birthYear": "1798",
+      "deathYear": "1863",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix.jpg",
+      "localPosition": { "x": 0.6, "y": 0.3, "z": 0.2 },
+      "artworks": [
+        {
+          "id": "Q29530",
+          "title": "Liberty Leading the People",
+          "year": "1830",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Eug%C3%A8ne_Delacroix_-_La_libert%C3%A9_guidant_le_peuple.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Eug%C3%A8ne_Delacroix_-_La_libert%C3%A9_guidant_le_peuple.jpg",
+          "dimensions": { "width": 3000, "height": 2430 },
+          "aspectRatio": 1.23,
+          "description": "Iconic painting commemorating the July R********n of 1830 in France."
+        }
+      ]
+    },
+    {
+      "id": "Q184163",
+      "name": "Caspar David Friedrich",
+      "birthYear": "1774",
+      "deathYear": "1840",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Caspar_David_Friedrich_self_portrait.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Caspar_David_Friedrich_self_portrait.jpg",
+      "localPosition": { "x": -0.5, "y": 0.5, "z": 0.4 },
+      "artworks": [
+        {
+          "id": "Q311243",
+          "title": "Wanderer above the Sea of Fog",
+          "year": "1818",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+          "dimensions": { "width": 3000, "height": 3730 },
+          "aspectRatio": 0.80,
+          "description": "Masterpiece of Romanticism depicting a man standing on a rocky precipice."
+        }
+      ]
+    },
+    {
+      "id": "Q1207",
+      "name": "J.M.W. Turner",
+      "birthYear": "1775",
+      "deathYear": "1851",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Turner_selfportrait.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Turner_selfportrait.jpg",
+      "localPosition": { "x": 0.3, "y": -0.6, "z": 0.5 },
+      "artworks": [
+        {
+          "id": "Q154",
+          "title": "The Fighting Temeraire",
+          "year": "1839",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Turner%2C_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Turner%2C_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg",
+          "dimensions": { "width": 3000, "height": 2210 },
+          "aspectRatio": 1.36,
+          "description": "Depicts one of the last second-rate ships of the line being towed to be broken up."
+        }
+      ]
+    },
+    {
+      "id": "Q1348064",
+      "name": "Francisco Goya",
+      "birthYear": "1746",
+      "deathYear": "1828",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg",
+      "localPosition": { "x": -0.8, "y": -0.1, "z": -0.3 },
+      "artworks": [
+        {
+          "id": "Q1096310",
+          "title": "The Third of May 1808",
+          "year": "1814",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_in_Google_Earth.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_in_Google_Earth.jpg",
+          "dimensions": { "width": 3000, "height": 2220 },
+          "aspectRatio": 1.35,
+          "description": "Commemorates Spanish resistance to Napoleon's a****s during the Peninsular W**."
+        }
+      ]
+    },
+    {
+      "id": "Q175110",
+      "name": "John Constable",
+      "birthYear": "1776",
+      "deathYear": "1837",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/John_Constable_by_Daniel_Maclise.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/John_Constable_by_Daniel_Maclise.jpg",
+      "localPosition": { "x": 0.4, "y": 0.7, "z": -0.2 },
+      "artworks": [
+        {
+          "id": "Q1212850",
+          "title": "The Hay Wain",
+          "year": "1821",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/John_Constable_-_The_Hay_Wain.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/John_Constable_-_The_Hay_Wain.jpg",
+          "dimensions": { "width": 3000, "height": 2040 },
+          "aspectRatio": 1.47,
+          "description": "A rural English landscape depicting a horse-drawn cart in the River Stour."
+        }
+      ]
+    },
+    {
+      "id": "Q185208",
+      "name": "Théodore Géricault",
+      "birthYear": "1791",
+      "deathYear": "1824",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Th%C3%A9odore_G%C3%A9ricault_-_Portrait_de_l%27artiste.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Th%C3%A9odore_G%C3%A9ricault_-_Portrait_de_l%27artiste.jpg",
+      "localPosition": { "x": -0.6, "y": -0.4, "z": 0.7 },
+      "artworks": [
+        {
+          "id": "Q684826",
+          "title": "The Raft of the Medusa",
+          "year": "1819",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Jean_Louis_Th%C3%A9odore_G%C3%A9ricault_-_La_Radeau_de_la_M%C3%A9duse_-_Louvre.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Jean_Louis_Th%C3%A9odore_G%C3%A9ricault_-_La_Radeau_de_la_M%C3%A9duse_-_Louvre.jpg",
+          "dimensions": { "width": 3000, "height": 2080 },
+          "aspectRatio": 1.44,
+          "description": "Monumental painting depicting the tragic aftermath of a n***l shipwreck."
+        }
+      ]
+    },
+    {
+      "id": "Q483322",
+      "name": "William Blake",
+      "birthYear": "1757",
+      "deathYear": "1827",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/William_Blake_by_Thomas_Phillips.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/William_Blake_by_Thomas_Phillips.jpg",
+      "localPosition": { "x": 0.8, "y": -0.2, "z": -0.5 },
+      "artworks": [
+        {
+          "id": "Q3282218",
+          "title": "The Ancient of Days",
+          "year": "1794",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Europe_a_Prophecy%2C_copy_K%2C_plate_1%2C_frontispiece%2C_1794_%28Fitzwilliam_Museum%29.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Europe_a_Prophecy%2C_copy_K%2C_plate_1%2C_frontispiece%2C_1794_%28Fitzwilliam_Museum%29.jpg",
+          "dimensions": { "width": 1800, "height": 2600 },
+          "aspectRatio": 0.69,
+          "description": "Visionary watercolor etching of a mythological figure measuring the heavens."
+        }
+      ]
+    },
+    {
+      "id": "Q181922",
+      "name": "Ivan Aivazovsky",
+      "birthYear": "1817",
+      "deathYear": "1900",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Ivan_Aivazovsky_by_Alexey_Tyranov_%281841%2C_Tretyakov_gallery%29.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Ivan_Aivazovsky_by_Alexey_Tyranov_%281841%2C_Tretyakov_gallery%29.jpg",
+      "localPosition": { "x": -0.2, "y": 0.9, "z": -0.8 },
+      "artworks": [
+        {
+          "id": "Q2011707",
+          "title": "The Ninth Wave",
+          "year": "1850",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Hovhannes_Aivazovsky_-_The_Ninth_Wave_-_Russian_Museum_-_St._Petersburg_-_Russia.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Hovhannes_Aivazovsky_-_The_Ninth_Wave_-_Russian_Museum_-_St._Petersburg_-_Russia.jpg",
+          "dimensions": { "width": 3000, "height": 2000 },
+          "aspectRatio": 1.50,
+          "description": "Dramatic maritime painting showing survivors clinging to a mast in a turbulent ocean."
+        }
+      ]
+    },
+    {
+      "id": "Q336044",
+      "name": "Thomas Cole",
+      "birthYear": "1801",
+      "deathYear": "1848",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Thomas_Cole_by_Asher_Brown_Durand.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Thomas_Cole_by_Asher_Brown_Durand.jpg",
+      "localPosition": { "x": 0.1, "y": -0.9, "z": 0.6 },
+      "artworks": [
+        {
+          "id": "Q3522146",
+          "title": "The Oxbow",
+          "year": "1836",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Thomas_Cole_-_The_Oxbow_%28The_Connecticut_River_near_Northampton_1836%29.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Thomas_Cole_-_The_Oxbow_%28The_Connecticut_River_near_Northampton_1836%29.jpg",
+          "dimensions": { "width": 3000, "height": 2040 },
+          "aspectRatio": 1.47,
+          "description": "A seminal American landscape painting showing the wild wilderness contrasting with cultivated land."
+        }
+      ]
+    },
+    {
+      "id": "Q122285",
+      "name": "Henry Fuseli",
+      "birthYear": "1741",
+      "deathYear": "1825",
+      "portraitUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Henry_Fuseli_by_James_Northcote_1778.jpg",
+      "portraitThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Henry_Fuseli_by_James_Northcote_1778.jpg",
+      "localPosition": { "x": -0.7, "y": 0.2, "z": -0.6 },
+      "artworks": [
+        {
+          "id": "Q2316499",
+          "title": "The Nightmare",
+          "year": "1781",
+          "imageHighResUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/John_Henry_Fuseli_-_The_Nightmare.jpg",
+          "imageThumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/John_Henry_Fuseli_-_The_Nightmare.jpg",
+          "dimensions": { "width": 2500, "height": 1960 },
+          "aspectRatio": 1.27,
+          "description": "A Gothic vision of a sleeping w***n with a d***n sitting on her chest."
+        }
+      ]
+    }
+  ]
+}
