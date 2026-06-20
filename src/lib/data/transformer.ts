@@ -50,7 +50,9 @@ export function transformRawData(
   commonsImages: RawCommonsImage[],
   periodId: string,
   periodName: string,
-  description: string = ""
+  description: string = "",
+  minArtworks: number = 10,
+  maxArtworksPerArtist: number = 12
 ): PeriodConstellation {
   const artistMap = new Map<string, ArtistNode>();
 
@@ -83,6 +85,9 @@ export function transformRawData(
     const image = resolveImageUrl(aw.artworkImage, commonsImages);
     if (!image) continue;
 
+    // Enforce the per-artist artwork cap (gallery walls + VRAM budget).
+    if (artist.artworks.length >= maxArtworksPerArtist) continue;
+
     const artworkId = extractWikidataId(aw.artwork);
     const artwork: Artwork = {
       id: artworkId,
@@ -98,7 +103,12 @@ export function transformRawData(
     artist.artworks.push(artwork);
   }
 
-  const artists = Array.from(artistMap.values());
+  // Keep only artists that meet the period's minimum artwork threshold, so the
+  // cosmos never shows a star whose gallery is near-empty.
+  const artists = Array.from(artistMap.values()).filter(
+    (a) => a.artworks.length >= minArtworks
+  );
+
   let positions = sphericalFibonacci(artists.length, 3);
   positions = collisionAvoidance(positions, 0.5);
 

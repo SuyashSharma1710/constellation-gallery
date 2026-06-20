@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -15,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Constillation Gallery",
-  description: "Explore art history through an interactive 3D constellation",
+  title: "Constillation Gallery — Database Viewer",
+  description: "Browse art periods, artists, and artworks from the database",
 };
 
 export default function RootLayout({
@@ -29,9 +28,7 @@ export default function RootLayout({
       lang="en"
       className={`${cinzel.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
-        <NuqsAdapter>{children}</NuqsAdapter>
-      </body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }

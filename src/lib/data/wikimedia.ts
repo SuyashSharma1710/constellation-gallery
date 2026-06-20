@@ -30,6 +30,11 @@ interface CommonsApiResponse {
 const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
 const TIMEOUT_MS = 10000;
 
+// Wikimedia's User-Agent policy rejects requests with a generic/empty agent.
+// https://meta.wikimedia.org/wiki/User-Agent_policy
+const USER_AGENT =
+  "ConstellationGallery/1.0 (https://github.com/suyash/constellation-gallery; art-history-visualization)";
+
 function extractFilename(urlOrFilename: string): string {
   if (urlOrFilename.includes("File:")) {
     const match = urlOrFilename.match(/File:([^?#]+)/);
@@ -60,7 +65,7 @@ export async function fetchWikimediaImages(filenames: string[]): Promise<DataRes
     try {
       const response = await fetch(url, {
         signal: controller.signal,
-        headers: { Accept: "application/json" },
+        headers: { Accept: "application/json", "User-Agent": USER_AGENT },
         next: { revalidate: 86400 },
       });
 

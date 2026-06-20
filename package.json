@@ -10,6 +10,7 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
+    "db:reset": "tsx scripts/reset-database.ts",
     "sync-database": "tsx scripts/sync-database.ts"
   },
   "dependencies": {
